@@ -1,0 +1,741 @@
+-- Database: "Componentes_Computadora_BD"
+
+-- DROP DATABASE "Componentes_Computadora_BD";
+
+CREATE DATABASE "Componentes_Computadora_BD"
+  WITH OWNER = postgres
+       ENCODING = 'UTF8'
+       TABLESPACE = pg_default
+       LC_COLLATE = 'Spanish_Spain.1252'
+       LC_CTYPE = 'Spanish_Spain.1252'
+       CONNECTION LIMIT = -1;
+
+
+	   
+-- Table: "Cliente"
+
+-- DROP TABLE "Cliente";
+
+CREATE TABLE "Cliente"
+(
+  rfc_cliente character varying(13) NOT NULL,
+  nombre_cliente character varying(20),
+  apellido_paterno_cliente character varying(20),
+  apellido_materno_cliente character varying(20),
+  fecha_nacimiento_cliente date,
+  nombre_calle_cliente character varying(20) NOT NULL,
+  colonia_cliente character varying(20) NOT NULL,
+  delegacion_cliente character varying(20) NOT NULL,
+  estado_cliente character varying(20) NOT NULL,
+  ciudad_cliente character varying(20) NOT NULL,
+  numero_interior_cliente integer NOT NULL,
+  CONSTRAINT pk_rfc_cliente PRIMARY KEY (rfc_cliente),
+  CONSTRAINT ch_rfc_cliente CHECK (rfc_cliente::text ~ '[A-Z]{3,4}[0-9]{6}[A-Z]{2}[0-9]'::text)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE "Cliente"
+  OWNER TO postgres;
+
+  
+-- Table: "Compatibilidad_Procesador_Motherboard"
+
+-- DROP TABLE "Compatibilidad_Procesador_Motherboard";
+
+CREATE TABLE "Compatibilidad_Procesador_Motherboard"
+(
+  id_producto integer NOT NULL,
+  id_motherboard integer NOT NULL,
+  CONSTRAINT pk_compatibilidad_procesador_motherboard PRIMARY KEY (id_producto, id_motherboard),
+  CONSTRAINT chk_id_motherboard CHECK (id_motherboard > 0 AND id_motherboard <= 999999999),
+  CONSTRAINT chk_id_producto CHECK (id_producto > 0 AND id_producto <= 999999999)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE "Compatibilidad_Procesador_Motherboard"
+  OWNER TO postgres;
+
+  
+-- Table: "Componente_Pedido"
+
+-- DROP TABLE "Componente_Pedido";
+
+CREATE TABLE "Componente_Pedido"
+(
+  numero_pedido integer NOT NULL,
+  componente character varying(20) NOT NULL,
+  CONSTRAINT pk_componente_pedido PRIMARY KEY (numero_pedido, componente),
+  CONSTRAINT chk_numero_pedido CHECK (numero_pedido > 0 AND numero_pedido <= 999999999)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE "Componente_Pedido"
+  OWNER TO postgres;
+
+  
+-- Table: "Correo_Cliente"
+
+-- DROP TABLE "Correo_Cliente";
+
+CREATE TABLE "Correo_Cliente"
+(
+  rfc_cliente character varying(13) NOT NULL,
+  correo_cliente character varying(30) NOT NULL,
+  CONSTRAINT pk_correo_cliente PRIMARY KEY (rfc_cliente, correo_cliente),
+  CONSTRAINT chk_correo_cliente CHECK (correo_cliente::text ~* '^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+[.][A-Za-z]+$'::text),
+  CONSTRAINT chk_rfc_cliente CHECK (rfc_cliente::text ~ '[A-Z]{3,4}[0-9]{6}[A-Z]{2}[0-9]'::text)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE "Correo_Cliente"
+  OWNER TO postgres;
+
+  
+-- Table: "Correo_Proveedor"
+
+-- DROP TABLE "Correo_Proveedor";
+
+CREATE TABLE "Correo_Proveedor"
+(
+  rfc_proveedor character varying(13) NOT NULL,
+  correo_proveedor character varying(30) NOT NULL,
+  CONSTRAINT pk_correo_proveedor PRIMARY KEY (rfc_proveedor, correo_proveedor),
+  CONSTRAINT chk_correo_proveedor CHECK (correo_proveedor::text ~* '^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+[.][A-Za-z]+$'::text),
+  CONSTRAINT chk_rfc_proveedor CHECK (rfc_proveedor::text ~ '[A-Z]{3,4}[0-9]{6}[A-Z]{2}[0-9]'::text)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE "Correo_Proveedor"
+  OWNER TO postgres;
+
+  
+-- Table: "Disco_Duro"
+
+-- DROP TABLE "Disco_Duro";
+
+CREATE TABLE "Disco_Duro"
+(
+  id_producto integer NOT NULL,
+  tipo_disco_duro character varying(20),
+  id_disco_duro integer NOT NULL,
+  CONSTRAINT pk_disco_duro PRIMARY KEY (id_producto, id_disco_duro),
+  CONSTRAINT chk_id_disco_duro CHECK (id_disco_duro > 0 AND id_disco_duro <= 999999999),
+  CONSTRAINT chk_id_producto CHECK (id_producto > 0 AND id_producto <= 999999999)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE "Disco_Duro"
+  OWNER TO postgres;
+  
+-- Table: "Dispositivo_de_Entrada"
+
+-- DROP TABLE "Dispositivo_de_Entrada";
+
+CREATE TABLE "Dispositivo_de_Entrada"
+(
+  id_dispositivo_de_entrada integer NOT NULL,
+  id_producto integer NOT NULL,
+  tipo_dispositivo_de_entrada character varying(20),
+  CONSTRAINT pk_dispositivo_de_entrada PRIMARY KEY (id_producto, id_dispositivo_de_entrada),
+  CONSTRAINT chk_id_dispositivo_de_entrada CHECK (id_dispositivo_de_entrada > 0 AND id_dispositivo_de_entrada <= 999999999),
+  CONSTRAINT chk_id_producto CHECK (id_producto > 0 AND id_producto <= 999999999)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE "Dispositivo_de_Entrada"
+  OWNER TO postgres;
+
+  
+-- Table: "Dispositivo_de_Salida"
+
+-- DROP TABLE "Dispositivo_de_Salida";
+
+CREATE TABLE "Dispositivo_de_Salida"
+(
+  id_dispositivo_de_salida integer NOT NULL,
+  id_producto integer NOT NULL,
+  tipo_dispositivo_de_salida character varying(20),
+  CONSTRAINT pk_dispositivo_de_salida PRIMARY KEY (id_producto, id_dispositivo_de_salida),
+  CONSTRAINT chk_id_dispositivo_de_salida CHECK (id_dispositivo_de_salida > 0 AND id_dispositivo_de_salida <= 999999999),
+  CONSTRAINT chk_id_producto CHECK (id_producto > 0 AND id_producto <= 999999999)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE "Dispositivo_de_Salida"
+  OWNER TO postgres;
+
+  
+-- Table: "Entrega_Mensajero_Cliente"
+
+-- DROP TABLE "Entrega_Mensajero_Cliente";
+
+CREATE TABLE "Entrega_Mensajero_Cliente"
+(
+  rfc_cliente character varying(13) NOT NULL,
+  rfc_mensajero character(13) NOT NULL,
+  CONSTRAINT "Entrega_Mensajero_Cliente_pkey" PRIMARY KEY (rfc_cliente, rfc_mensajero),
+  CONSTRAINT chk_rfc_cliente CHECK (rfc_cliente::text ~ '[A-Z]{3,4}[0-9]{6}[A-Z]{2}[0-9]'::text),
+  CONSTRAINT chk_rfc_mensajero CHECK (rfc_mensajero ~ '[A-Z]{3,4}[0-9]{6}[A-Z]{2}[0-9]'::text)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE "Entrega_Mensajero_Cliente"
+  OWNER TO postgres;
+
+  
+-- Table: "Entrega_Mensajero_Pedido"
+
+-- DROP TABLE "Entrega_Mensajero_Pedido";
+
+CREATE TABLE "Entrega_Mensajero_Pedido"
+(
+  numero_pedido integer NOT NULL,
+  rfc_mensajero character(13) NOT NULL,
+  CONSTRAINT pk_entrega_mensajero_pedido PRIMARY KEY (rfc_mensajero, numero_pedido),
+  CONSTRAINT chk_numero_pedido CHECK (numero_pedido > 0 AND numero_pedido <= 999999999),
+  CONSTRAINT chk_rfc_mensajero CHECK (rfc_mensajero ~ '[A-Z]{3,4}[0-9]{6}[A-Z]{2}[0-9]'::text)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE "Entrega_Mensajero_Pedido"
+  OWNER TO postgres;
+
+  
+-- Table: "Equipo_Armado"
+
+-- DROP TABLE "Equipo_Armado";
+
+CREATE TABLE "Equipo_Armado"
+(
+  id_equipo_armado integer NOT NULL,
+  id_producto integer NOT NULL,
+  id_disco_duro integer NOT NULL,
+  id_monitor integer NOT NULL,
+  id_tarjeta_de_sonido integer NOT NULL,
+  id_dispositivo_de_salida integer NOT NULL,
+  id_dispositivo_de_entrada integer NOT NULL,
+  id_tarjeta_de_red integer NOT NULL,
+  id_gabinete integer NOT NULL,
+  id_motherboard integer NOT NULL,
+  id_tarjeta_grafica integer NOT NULL,
+  id_memoria_ram integer NOT NULL,
+  id_procesador integer NOT NULL,
+  numero_pedido integer NOT NULL,
+  CONSTRAINT pk_equipo_armado PRIMARY KEY (id_equipo_armado),
+  CONSTRAINT fk_numero_pedido FOREIGN KEY (numero_pedido)
+      REFERENCES "Pedido" (numero_pedido) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION,
+  CONSTRAINT chk_id_disco_duro CHECK (id_disco_duro > 0 AND id_disco_duro <= 999999999),
+  CONSTRAINT chk_id_dispositivo_de_entrada CHECK (id_dispositivo_de_entrada > 0 AND id_dispositivo_de_entrada <= 999999999),
+  CONSTRAINT chk_id_dispositivo_de_salida CHECK (id_dispositivo_de_salida > 0 AND id_dispositivo_de_salida <= 999999999),
+  CONSTRAINT chk_id_equipo_armado CHECK (id_equipo_armado > 0 AND id_equipo_armado <= 999999999),
+  CONSTRAINT chk_id_gabinete CHECK (id_gabinete > 0 AND id_gabinete <= 999999999),
+  CONSTRAINT chk_id_memoria_ram CHECK (id_memoria_ram > 0 AND id_memoria_ram <= 999999999),
+  CONSTRAINT chk_id_monitor CHECK (id_monitor > 0 AND id_monitor <= 999999999),
+  CONSTRAINT chk_id_motherboard CHECK (id_motherboard > 0 AND id_motherboard <= 999999999),
+  CONSTRAINT chk_id_procesador CHECK (id_procesador > 0 AND id_procesador <= 999999999),
+  CONSTRAINT chk_id_producto CHECK (id_producto > 0 AND id_producto <= 999999999),
+  CONSTRAINT chk_id_tarjeta_de_red CHECK (id_tarjeta_de_red > 0 AND id_tarjeta_de_red <= 999999999),
+  CONSTRAINT chk_id_tarjeta_de_sonido CHECK (id_tarjeta_de_sonido > 0 AND id_tarjeta_de_sonido <= 999999999),
+  CONSTRAINT chk_id_tarjeta_grafica CHECK (id_tarjeta_grafica > 0 AND id_tarjeta_grafica <= 999999999),
+  CONSTRAINT chk_numero_pedido CHECK (numero_pedido > 0 AND numero_pedido <= 999999999)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE "Equipo_Armado"
+  OWNER TO postgres;
+  
+  
+-- Table: "Equipo_Armado_Dispositivo_de_Entrada"
+
+-- DROP TABLE "Equipo_Armado_Dispositivo_de_Entrada";
+
+CREATE TABLE "Equipo_Armado_Dispositivo_de_Entrada"
+(
+  id_dispositivo_de_entrada integer NOT NULL,
+  id_equipo_armado integer NOT NULL,
+  CONSTRAINT pk_equipo_armado_dispositivo_de_entrada PRIMARY KEY (id_equipo_armado, id_dispositivo_de_entrada),
+  CONSTRAINT chk_dispositivo_de_entrada CHECK (id_dispositivo_de_entrada > 0 AND id_dispositivo_de_entrada <= 999999999),
+  CONSTRAINT chk_id_equipo_armado CHECK (id_equipo_armado > 0 AND id_equipo_armado <= 999999999)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE "Equipo_Armado_Dispositivo_de_Entrada"
+  OWNER TO postgres;
+
+  
+-- Table: "Equipo_Armado_Dispositivo_de_Salida"
+
+-- DROP TABLE "Equipo_Armado_Dispositivo_de_Salida";
+
+CREATE TABLE "Equipo_Armado_Dispositivo_de_Salida"
+(
+  id_dispositivo_de_salida integer NOT NULL,
+  id_equipo_armado integer NOT NULL,
+  CONSTRAINT pk_equipo_armado_dispositivo_de_salida PRIMARY KEY (id_equipo_armado, id_dispositivo_de_salida),
+  CONSTRAINT chk_id_dispositivo_de_salida CHECK (id_dispositivo_de_salida > 0 AND id_dispositivo_de_salida <= 999999999),
+  CONSTRAINT chk_id_equipo_armado CHECK (id_equipo_armado > 0 AND id_equipo_armado <= 999999999)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE "Equipo_Armado_Dispositivo_de_Salida"
+  OWNER TO postgres;
+
+  
+-- Table: "Gabinete"
+
+-- DROP TABLE "Gabinete";
+
+CREATE TABLE "Gabinete"
+(
+  id_gabinete integer NOT NULL,
+  id_producto integer NOT NULL,
+  fuente_de_poder_gabinete character varying(20),
+  material_ganinete character varying(20),
+  color_gabinete character varying(20),
+  CONSTRAINT pk_gabinete PRIMARY KEY (id_producto, id_gabinete),
+  CONSTRAINT chk_id_gabinete CHECK (id_gabinete > 0 AND id_gabinete <= 999999999),
+  CONSTRAINT chk_id_producto CHECK (id_producto > 0 AND id_producto <= 999999999)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE "Gabinete"
+  OWNER TO postgres;
+
+  
+-- Table: "Interfaz_Tarjeta_de_Red"
+
+-- DROP TABLE "Interfaz_Tarjeta_de_Red";
+
+CREATE TABLE "Interfaz_Tarjeta_de_Red"
+(
+  id_tarjeta_de_red integer NOT NULL,
+  interfaz_tarjeta_de_red character varying(20) NOT NULL,
+  CONSTRAINT pk_interfaz_tarjeta_de_red PRIMARY KEY (id_tarjeta_de_red, interfaz_tarjeta_de_red),
+  CONSTRAINT chk_id_tarjeta_de_red CHECK (id_tarjeta_de_red > 0 AND id_tarjeta_de_red <= 999999999)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE "Interfaz_Tarjeta_de_Red"
+  OWNER TO postgres;
+
+  
+-- Table: "Memoria_Ram"
+
+-- DROP TABLE "Memoria_Ram";
+
+CREATE TABLE "Memoria_Ram"
+(
+  id_memoria_ram integer NOT NULL,
+  id_producto integer NOT NULL,
+  capacidad_memoria_ram character varying(10),
+  CONSTRAINT pk_memoria_ram PRIMARY KEY (id_producto, id_memoria_ram),
+  CONSTRAINT chk_id_memoria_ram CHECK (id_memoria_ram > 0 AND id_memoria_ram <= 999999999),
+  CONSTRAINT chk_id_producto CHECK (id_producto > 0 AND id_producto <= 999999999)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE "Memoria_Ram"
+  OWNER TO postgres;
+
+  
+-- Table: "Mensajero"
+
+-- DROP TABLE "Mensajero";
+
+CREATE TABLE "Mensajero"
+(
+  nombre_mensajero character varying(20),
+  apellido_paterno_mensajero character varying(20),
+  apellido_materno_mensajero character varying(20),
+  correo_mensajero character varying(20),
+  rfc_mensajero character(13) NOT NULL,
+  CONSTRAINT pk_mensajero PRIMARY KEY (rfc_mensajero),
+  CONSTRAINT chk_correo_mensajero CHECK (correo_mensajero::text ~* '^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+[.][A-Za-z]+$'::text),
+  CONSTRAINT chk_rfc_mensajero CHECK (rfc_mensajero ~ '[A-Z]{3,4}[0-9]{6}[A-Z]{2}[0-9]'::text)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE "Mensajero"
+  OWNER TO postgres;
+
+  
+-- Table: "Monitor"
+
+-- DROP TABLE "Monitor";
+
+CREATE TABLE "Monitor"
+(
+  id_producto integer NOT NULL,
+  es_touch_monitor boolean,
+  tamanio_monitor real,
+  resolucion_monitor real,
+  tipo_monitor character varying(20),
+  id_monitor integer NOT NULL,
+  CONSTRAINT pk_monitor PRIMARY KEY (id_producto, id_monitor),
+  CONSTRAINT chk_id_monitor CHECK (id_monitor > 0 AND id_monitor <= 999999999),
+  CONSTRAINT chk_id_producto CHECK (id_producto > 0 AND id_producto <= 999999999)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE "Monitor"
+  OWNER TO postgres;
+
+  
+-- Table: "Motherboard"
+
+-- DROP TABLE "Motherboard";
+
+CREATE TABLE "Motherboard"
+(
+  id_motherboard integer NOT NULL,
+  id_producto integer NOT NULL,
+  bus_motherboard character varying(10),
+  capacidad_memoria_motherboard real,
+  compatibilidad_marca_motherboard character varying(20),
+  CONSTRAINT pk_motherboard PRIMARY KEY (id_producto, id_motherboard),
+  CONSTRAINT chk_capacidad_memoria_motherboard CHECK (capacidad_memoria_motherboard > 0::double precision),
+  CONSTRAINT chk_id_motherboard CHECK (id_motherboard > 0 AND id_motherboard <= 999999999),
+  CONSTRAINT chk_id_producto CHECK (id_producto > 0 AND id_producto <= 999999999)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE "Motherboard"
+  OWNER TO postgres;
+
+  
+-- Table: "Pago"
+
+-- DROP TABLE "Pago";
+
+CREATE TABLE "Pago"
+(
+  numero_pago integer NOT NULL,
+  rfc_cliente character varying(13) NOT NULL,
+  numero_pedido integer NOT NULL,
+  fecha_pago date,
+  cantidad_pago double precision,
+  CONSTRAINT pk_pago PRIMARY KEY (numero_pago),
+  CONSTRAINT fk_numero_pedido FOREIGN KEY (numero_pedido)
+      REFERENCES "Pedido" (numero_pedido) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION,
+  CONSTRAINT fk_rfc_cliente FOREIGN KEY (rfc_cliente)
+      REFERENCES "Cliente" (rfc_cliente) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION,
+  CONSTRAINT chk_cantidad_pago CHECK (cantidad_pago > 0::double precision),
+  CONSTRAINT chk_numero_pago CHECK (numero_pago > 0 AND numero_pago <= 999999999),
+  CONSTRAINT chk_numero_pedido CHECK (numero_pedido > 0 AND numero_pedido <= 999999999),
+  CONSTRAINT chk_rfc_cliente CHECK (rfc_cliente::text ~ '[A-Z]{3,4}[0-9]{6}[A-Z]{2}[0-9]'::text)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE "Pago"
+  OWNER TO postgres;
+
+  
+-- Table: "Pedido"
+
+-- DROP TABLE "Pedido";
+
+CREATE TABLE "Pedido"
+(
+  numero_pedido integer NOT NULL,
+  rfc_cliente character varying(13) NOT NULL,
+  fecha_pedido date,
+  cantidad_pedido double precision,
+  CONSTRAINT pk_numero_pedido PRIMARY KEY (numero_pedido),
+  CONSTRAINT fk_rfc_cliente FOREIGN KEY (rfc_cliente)
+      REFERENCES "Cliente" (rfc_cliente) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION,
+  CONSTRAINT chk_cantidad_pedido CHECK (cantidad_pedido > 0::double precision),
+  CONSTRAINT chk_numero_pedido CHECK (numero_pedido > 0 AND numero_pedido <= 999999999),
+  CONSTRAINT chk_rfc_cliente CHECK (rfc_cliente::text ~ '[A-Z]{3,4}[0-9]{6}[A-Z]{2}[0-9]'::text)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE "Pedido"
+  OWNER TO postgres;
+
+  
+-- Table: "Procesador"
+
+-- DROP TABLE "Procesador";
+
+CREATE TABLE "Procesador"
+(
+  id_procesador integer NOT NULL,
+  id_producto integer NOT NULL,
+  nucleos_logicos_procesador integer,
+  nucleos_fisicos_procesador integer,
+  modelo_procesador character varying(20),
+  capacidad_memoria_procesador character varying(10),
+  cache_procesador character varying(10),
+  CONSTRAINT pk_procesador PRIMARY KEY (id_producto, id_procesador),
+  CONSTRAINT chk_id_procesador CHECK (id_procesador > 0 AND id_procesador <= 999999999),
+  CONSTRAINT chk_id_producto CHECK (id_producto > 0 AND id_producto <= 999999999),
+  CONSTRAINT chk_nucleos_fisicos_procesador CHECK (nucleos_fisicos_procesador > 0),
+  CONSTRAINT chk_nucleos_logicos_procesador CHECK (nucleos_logicos_procesador > 0)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE "Procesador"
+  OWNER TO postgres;
+
+  
+-- Table: "Producto"
+
+-- DROP TABLE "Producto";
+
+CREATE TABLE "Producto"
+(
+  id_producto integer NOT NULL,
+  marca_producto character varying(30),
+  precio_producto real,
+  descripcion_producto character varying(60),
+  CONSTRAINT pk_producto PRIMARY KEY (id_producto),
+  CONSTRAINT chk_id_producto CHECK (id_producto > 0 AND id_producto <= 999999999),
+  CONSTRAINT chk_precio_producto CHECK (precio_producto > 0::double precision)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE "Producto"
+  OWNER TO postgres;
+
+  
+-- Table: "Protocolo_Tarjeta_de_Red"
+
+-- DROP TABLE "Protocolo_Tarjeta_de_Red";
+
+CREATE TABLE "Protocolo_Tarjeta_de_Red"
+(
+  id_tarjeta_de_red integer NOT NULL,
+  protocolo_tarjeta_de_red character varying(20) NOT NULL,
+  CONSTRAINT pk_protocolo_tarjeta_de_red PRIMARY KEY (id_tarjeta_de_red, protocolo_tarjeta_de_red),
+  CONSTRAINT chk_id_tarjeta_de_red CHECK (id_tarjeta_de_red > 0 AND id_tarjeta_de_red <= 999999999)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE "Protocolo_Tarjeta_de_Red"
+  OWNER TO postgres;
+
+  
+-- Table: "Provee_Proveedor_Producto"
+
+-- DROP TABLE "Provee_Proveedor_Producto";
+
+CREATE TABLE "Provee_Proveedor_Producto"
+(
+  id_producto integer NOT NULL,
+  rfc_proveedor character varying(13) NOT NULL,
+  CONSTRAINT pk_provee_proveedor_producto PRIMARY KEY (id_producto, rfc_proveedor),
+  CONSTRAINT chk_id_producto CHECK (id_producto > 0 AND id_producto <= 999999999),
+  CONSTRAINT chk_rfc_proveedor CHECK (rfc_proveedor::text ~ '[A-Z]{3,4}[0-9]{6}[A-Z]{2}[0-9]'::text)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE "Provee_Proveedor_Producto"
+  OWNER TO postgres;
+
+  
+-- Table: "Proveedor"
+
+-- DROP TABLE "Proveedor";
+
+CREATE TABLE "Proveedor"
+(
+  rfc_proveedor character varying(13) NOT NULL,
+  nombre_proveedor character varying(20) NOT NULL,
+  giro_productos_proveedor character varying(20),
+  CONSTRAINT pk_proveedor PRIMARY KEY (rfc_proveedor),
+  CONSTRAINT chk_rfc_proveedor CHECK (rfc_proveedor::text ~ '[A-Z]{3,4}[0-9]{6}[A-Z]{2}[0-9]'::text)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE "Proveedor"
+  OWNER TO postgres;
+
+  
+-- Table: "Recibe_Mensajero_Pedido"
+
+-- DROP TABLE "Recibe_Mensajero_Pedido";
+
+CREATE TABLE "Recibe_Mensajero_Pedido"
+(
+  numero_pedido integer NOT NULL,
+  rfc_mensajero character(13) NOT NULL,
+  CONSTRAINT pk_recibe_mensajero_pedido PRIMARY KEY (rfc_mensajero, numero_pedido),
+  CONSTRAINT chk_numero_pedido CHECK (numero_pedido > 0 AND numero_pedido <= 999999999),
+  CONSTRAINT chk_rfc_mensajero CHECK (rfc_mensajero ~ '[A-Z]{3,4}[0-9]{6}[A-Z]{2}[0-9]'::text)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE "Recibe_Mensajero_Pedido"
+  OWNER TO postgres;
+
+  
+-- Table: "Solicita_Pedido_Producto"
+
+-- DROP TABLE "Solicita_Pedido_Producto";
+
+CREATE TABLE "Solicita_Pedido_Producto"
+(
+  id_producto integer NOT NULL,
+  numero_pedido integer NOT NULL,
+  CONSTRAINT pk_solicita_pedido_producto PRIMARY KEY (numero_pedido, id_producto),
+  CONSTRAINT chk_id_producto CHECK (id_producto > 0 AND id_producto <= 999999999),
+  CONSTRAINT chk_numero_pedido CHECK (numero_pedido > 0 AND numero_pedido <= 999999999)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE "Solicita_Pedido_Producto"
+  OWNER TO postgres;
+
+  
+-- Table: "Tarjeta_Grafica"
+
+-- DROP TABLE "Tarjeta_Grafica";
+
+CREATE TABLE "Tarjeta_Grafica"
+(
+  id_producto integer NOT NULL,
+  memoria_ram_tarjeta_grafica integer,
+  id_tarjeta_grafica integer NOT NULL,
+  CONSTRAINT pk_tarjeta_grafica PRIMARY KEY (id_producto, id_tarjeta_grafica),
+  CONSTRAINT ch_id_tarjeta_grafica CHECK (id_tarjeta_grafica > 0 AND id_tarjeta_grafica <= 999999999),
+  CONSTRAINT chk_id_producto CHECK (id_producto > 0 AND id_producto <= 999999999)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE "Tarjeta_Grafica"
+  OWNER TO postgres;
+
+  
+-- Table: "Tarjeta_de_Red"
+
+-- DROP TABLE "Tarjeta_de_Red";
+
+CREATE TABLE "Tarjeta_de_Red"
+(
+  id_producto integer NOT NULL,
+  id_tarjeta_de_red integer NOT NULL,
+  velocidad_transferencia_tarjeta_de_red real,
+  CONSTRAINT pk_tarjeta_de_red PRIMARY KEY (id_tarjeta_de_red, id_producto),
+  CONSTRAINT chk_id_producto CHECK (id_producto > 0 AND id_producto <= 999999999),
+  CONSTRAINT chk_id_tarjeta_de_red CHECK (id_tarjeta_de_red > 0 AND id_tarjeta_de_red <= 999999999),
+  CONSTRAINT chk_velocidad_transferencia_tarjeta_de_red CHECK (velocidad_transferencia_tarjeta_de_red > 0::double precision)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE "Tarjeta_de_Red"
+  OWNER TO postgres;
+
+  
+-- Table: "Tarjeta_de_Sonido"
+
+-- DROP TABLE "Tarjeta_de_Sonido";
+
+CREATE TABLE "Tarjeta_de_Sonido"
+(
+  id_producto integer NOT NULL,
+  entradas_tarjeta_sonido integer,
+  salidas_tarjeta_sonido integer,
+  id_tarjeta_de_sonido integer NOT NULL,
+  CONSTRAINT pk_tarjeta_de_sonido PRIMARY KEY (id_producto, id_tarjeta_de_sonido),
+  CONSTRAINT chk_entradas_tarjeta_sonido CHECK (entradas_tarjeta_sonido >= 0),
+  CONSTRAINT chk_id_producto CHECK (id_producto > 0 AND id_producto <= 999999999),
+  CONSTRAINT chk_id_tarjeta_de_sonido CHECK (id_tarjeta_de_sonido > 0 AND id_tarjeta_de_sonido <= 999999999),
+  CONSTRAINT chk_salidas_tarjeta_sonido CHECK (salidas_tarjeta_sonido >= 0)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE "Tarjeta_de_Sonido"
+  OWNER TO postgres;
+
+  
+-- Table: "Telefono_Cliente"
+
+-- DROP TABLE "Telefono_Cliente";
+
+CREATE TABLE "Telefono_Cliente"
+(
+  rfc_cliente character varying(13) NOT NULL,
+  telefono_cliente integer NOT NULL,
+  CONSTRAINT pk_telefono_cliente PRIMARY KEY (rfc_cliente, telefono_cliente),
+  CONSTRAINT chk_rfc_cliente CHECK (rfc_cliente::text ~ '[A-Z]{3,4}[0-9]{6}[A-Z]{2}[0-9]'::text),
+  CONSTRAINT chk_telefono_cliente CHECK (telefono_cliente > 0)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE "Telefono_Cliente"
+  OWNER TO postgres;
+
+  
+-- Table: "Telefono_Proveedor"
+
+-- DROP TABLE "Telefono_Proveedor";
+
+CREATE TABLE "Telefono_Proveedor"
+(
+  rfc_proveedor character varying(13) NOT NULL,
+  telefono_proveedor integer NOT NULL,
+  CONSTRAINT pk_telefono_proveedor PRIMARY KEY (rfc_proveedor, telefono_proveedor),
+  CONSTRAINT chk_rfc_proveedor CHECK (rfc_proveedor::text ~ '[A-Z]{3,4}[0-9]{6}[A-Z]{2}[0-9]'::text),
+  CONSTRAINT chk_telefono_proveedor CHECK (telefono_proveedor > 0)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE "Telefono_Proveedor"
+  OWNER TO postgres;
+
+  
+-- Table: "Tipo_Audio_Tarjeta_Sonido"
+
+-- DROP TABLE "Tipo_Audio_Tarjeta_Sonido";
+
+CREATE TABLE "Tipo_Audio_Tarjeta_Sonido"
+(
+  id_tarjeta_de_sonido integer NOT NULL,
+  tipo_audio character varying(8) NOT NULL,
+  CONSTRAINT pk_tipo_tarjeta_sonido PRIMARY KEY (id_tarjeta_de_sonido, tipo_audio),
+  CONSTRAINT chk_id_tarjeta_de_sonido CHECK (id_tarjeta_de_sonido > 0 AND id_tarjeta_de_sonido <= 999999999)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE "Tipo_Audio_Tarjeta_Sonido"
+  OWNER TO postgres;
+
+  
