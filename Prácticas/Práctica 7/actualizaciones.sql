@@ -1,0 +1,460 @@
+﻿-- Cliete
+--1
+--select * from "Cliente"
+-- UPDATE "Cliente"
+-- SET colonia_cliente='Nápoles'
+-- WHERE rfc_cliente='LOJP910202HDF'
+
+-- --2
+-- UPDATE "Cliente"
+-- SET nombre_cliente = 'Pánfilo', 
+-- 	apellido_paterno_cliente='Paredes', 
+-- 	apellido_materno_cliente='Polares'
+-- WHERE nombre_calle_cliente like 'Alfa';
+-- 	
+-- 
+-- 
+-- Compatibilidad_Procesador_Motherboard
+-- --1
+--select * from "Compatibilidad_Procesador_Motherboard"
+-- UPDATE "Compatibilidad_Procesador_Motherboard"
+-- SET Id_producto=  1
+-- WHERE Id_motherboard = 1;
+-- 
+-- --2
+-- UPDATE "Compatibilidad_Procesador_Motherboard"
+-- SET Id_motherboard =1
+-- WHERE Id_producto = 3;
+-- 
+--
+--
+-- Componente_Pedido
+-- -- select * from "Componente_Pedido"
+-- --1
+-- UPDATE "Componente_Pedido"
+-- SET Numero_pedido =100
+-- WHERE componente = 'Teclado';
+-- 
+-- --2
+-- UPDATE "Componente_Pedido"
+-- SET componente = 'Mouse HP'
+-- WHERE componente = 'Teclado';
+-- 
+--
+--
+-- Correo_Cliente
+-- -- select * from "Correo_Cliente"
+-- --1
+-- UPDATE "Correo_Cliente"
+-- SET correo_cliente = 'monR@outlook.com'
+-- WHERE Rfc_cliente = 'MONR980520HDF';
+-- 
+-- --2
+-- UPDATE "Correo_Cliente"
+-- SET rfc_cliente ='POJP910202HDF'
+-- WHERE correo_cliente = 'plopez@gmail.com';
+-- 
+--
+--
+-- Correo_Proveedor
+-- -- select * from "Correo_Proveedor"
+-- --1
+-- UPDATE "Correo_Proveedor"
+-- SET rfc_proveedor ='ABNA880221MPP'
+-- WHERE correo_proveedor = 'contactoventas@compuventas.com';
+--  
+-- --2
+-- UPDATE "Correo_Proveedor"
+-- SET correo_proveedor ='fade@ciencias.unam.mx'
+-- WHERE rfc_proveedor = 'FADE900224HDG';
+-- 
+--
+--
+-- Disco_Duro
+-- -- SELECT * FROM "Disco_Duro"
+-- --1
+-- UPDATE "Disco_Duro"
+-- SET tipo_disco_duro = 'SSHD'
+-- WHERE Id_producto = 22;
+-- 
+-- --2
+-- UPDATE "Disco_Duro"
+-- SET Id_producto=100
+-- WHERE Tipo_disco_duro='SATA'
+-- 
+--
+--
+-- Dispositivo_de_Entrada
+-- -- SELECT * FROM "Dispositivo_de_Entrada"
+-- --1
+-- UPDATE "Dispositivo_de_Entrada"
+-- SET tipo_dispositivo_de_entrada ='Escaner'
+-- WHERE id_producto = 54;
+-- 
+-- --2
+-- UPDATE "Dispositivo_de_Entrada"
+-- SET tipo_dispositivo_de_entrada = 'Audífonos'
+-- WHERE id_dispositivo_de_entrada =3 AND Id_producto = 51;
+-- 
+--
+--
+-- Dispositivo_de_Salida
+-- --select * from "Dispositivo_de_Salida"
+-- --1
+-- UPDATE "Dispositivo_de_Salida"
+-- SET tipo_dispositivo_de_salida = 'Audífonos'
+-- WHERE id_producto = 72;
+-- 
+-- --2
+-- UPDATE "Dispositivo_de_Salida"
+-- SET id_dispositivo_de_salida = 6
+-- WHERE id_producto = 72;
+-- 
+--
+--
+-- Entrega_Mensajero_Cliente
+-- --select * from "Entrega_Mensajero_Cliente"
+-- --1
+-- UPDATE "Entrega_Mensajero_Cliente"
+-- SET rfc_mensajero ='EISR800930CQ4'
+-- WHERE rfc_cliente ='MONR980520HDF' ;
+-- 
+-- --2
+-- UPDATE "Entrega_Mensajero_Cliente"
+-- SET rfc_cliente ='MNAM980520HDF' 
+-- WHERE rfc_mensajero = 'MAFA710212V22';
+-- 
+--
+--
+-- -- Entrega_Mensajero_Pedido
+-- --1
+-- UPDATE "Entrega_Mensajero_Pedido"
+-- SET rfc_mensajero='YZDB850976FLD'
+-- WHERE numero_pedido = 71;
+-- 
+-- --2
+-- UPDATE "Entrega_Mensajero_Pedido"
+-- SET numero_pedido = 79
+-- WHERE rfc_mensajero = 'JTCA870499PJK';
+--  
+--
+--
+-- Equipo_Armado
+-- --select * from "Equipo_Armado"
+-- --1
+-- UPDATE "Equipo_Armado"
+-- SET Id_tarjeta_grafica = 31 , Id_memoria_ram =25
+-- WHERE Id_equipo_armado = 2;
+-- 
+-- --2
+-- UPDATE "Equipo_Armado"
+-- SET Id_disco_duro =3 , Id_monitor = 32, Id_tarjeta_de_sonido =31
+-- WHERE Id_equipo_armado =4 ;
+-- 
+--
+--
+-- Equipo_Armado_Dispositivo_de_Entrada
+-- --select * from "Equipo_Armado_Dispositivo_de_Entrada"
+-- --1
+-- UPDATE "Equipo_Armado_Dispositivo_de_Entrada"
+-- SET id_dispositivo_de_entrada = 11
+-- WHERE id_equipo_armado = 2;
+-- 
+-- --2
+-- UPDATE "Equipo_Armado_Dispositivo_de_Entrada"
+-- SET id_equipo_armado = 2
+-- WHERE id_dispositivo_de_entrada = 12;
+-- 
+--
+--
+-- 
+-- --Equipo_Armado_Dispositivo_de_Salida
+-- --1
+-- UPDATE "Equipo_Armado_Dispositivo_de_Salida"
+-- SET Id_dispositivo_de_salida = 22
+-- WHERE Id_equipo_armado =2;
+-- 
+-- --2
+-- UPDATE "Equipo_Armado_Dispositivo_de_Salida"
+-- SET id_dispositivo_de_salida = 24
+-- WHERE id_equipo_armado = 25;
+--
+--
+--
+-- Gabinete
+-- --select * from "Gabinete"
+-- --1
+-- UPDATE "Gabinete"
+-- SET material_ganinete ='Oro' ,color_gabinete = 'Blanco'
+-- WHERE Id_gabinete = 4;
+-- 
+-- --2
+-- UPDATE "Gabinete"
+-- SET Fuente_de_poder_gabinete ='AT'
+-- WHERE Id_gabinete = 2;
+-- 
+--
+--
+-- --Interfaz_Tarjeta_de_Red
+-- --1
+-- UPDATE "Interfaz_Tarjeta_de_Red"
+-- SET interfaz_tarjeta_de_red = 'MII'
+-- WHERE id_tarjeta_de_red = 1;
+-- 
+-- --2
+-- UPDATE "Interfaz_Tarjeta_de_Red"
+-- SET id_tarjeta_de_red = 6
+-- WHERE interfaz_tarjeta_de_red =  'AUI' AND id_tarjeta_de_red = 3;
+-- 
+--
+--
+-- --Memoria_Ram
+-- --1
+-- UPDATE "Memoria_Ram"
+-- SET capacidad_memoria_ram = '1T'
+-- WHERE id_memoria_ram = 1;
+-- 
+-- --2
+-- UPDATE "Memoria_Ram"
+-- SET capacidad_memoria_ram = '30MB' 
+-- WHERE id_producto = 84;
+-- 
+--
+--
+-- --Mensajero
+-- --1
+-- UPDATE "Mensajero"
+-- SET correo_mensajero ='victor@gmail.com'
+-- WHERE rfc_mensajero ='VBER670876CVA';
+-- 
+-- --2
+-- UPDATE "Mensajero"
+-- SET nombre_mensajero ='Nestor Alberto'
+-- WHERE rfc_mensajero = 'NETF800287AVR';
+-- 	
+--
+--
+-- --Monitor
+-- --1
+-- UPDATE "Monitor"
+-- SET resolucion_monitor ='1280x800' ,tamanio_monitor='40 pulgadas' 
+-- WHERE id_producto = 19;
+-- 
+-- --2
+-- UPDATE "Monitor"
+-- SET tamanio_monitor = '80 pulgadas'
+-- WHERE id_producto = 19;
+-- 
+-- 
+-- 	
+-- --Motherboard	 
+-- --1
+-- UPDATE "Motherboard"
+-- SET capacidad_memoria_motherboard = 'Intel'
+-- WHERE id_motherboard = 2;
+-- 
+-- --2
+-- UPDATE "Motherboard"
+-- SET compatibilidad_marca_motherboard ='Amd'
+-- WHERE Id_motherboard = 3;
+--  
+--
+--
+-- --Pago
+-- --1
+-- UPDATE "Pago"
+-- SET rfc_cliente ='LOJP910202HDF'
+-- WHERE cantidad_pago = 2000;
+-- 
+-- --2
+-- UPDATE "Pago"
+-- SET cantidad_pago = 30500
+-- WHERE rfc_cliente = 'LOJP910202HDF';
+-- 
+-- 
+-- 
+-- --Pedido
+-- --1
+-- UPDATE "Pedido"
+-- SET cantidad_pedido =1000
+-- WHERE numero_pedido = 201;
+-- 
+-- --2
+-- UPDATE "Pedido"
+-- SET fecha_pedido ='2015-10-20'
+-- WHERE numero_pedido = 217 AND rfc_cliente = 'LELA100598HDF';
+-- 
+-- 
+-- 
+-- --"Procesador"
+-- --1
+-- UPDATE "Procesador"
+-- SET nucleos_logicos_procesador = 7,nucleos_fisicos_procesador = 3 
+-- WHERE Id_procesador = 4;	
+-- 
+-- --2
+-- UPDATE "Procesador"
+-- SET nucleos_fisicos_procesador = 1, modelo_procesador = 'AMD Fusion'
+-- WHERE Id_producto = 68;	
+--
+--
+--
+-- Producto 
+--SELECT * FROM "Producto"
+--1
+-- UPDATE "Producto"
+-- SET marca_producto = 'PATITO',precio_producto=2000
+-- WHERE id_producto = 204;
+-- 
+-- --2
+-- UPDATE "Producto"
+-- SET precio_producto= 15000
+-- WHERE id_producto = 152;
+-- 
+-- 
+-- 
+-- --Protocolo_Tarjeta_de_Red
+-- --1
+-- UPDATE "Protocolo_Tarjeta_de_Red"
+-- SET id_tarjeta_de_red = 3
+-- WHERE protocolo_tarjeta_de_red = 'TCP/IP' AND id_tarjeta_de_red = 4;
+-- 
+-- --2
+-- UPDATE "Protocolo_Tarjeta_de_Red"
+-- SET Protocolo_tarjeta_de_red ='TCP/IP'
+-- WHERE Id_tarjeta_de_red = 5;
+--
+--
+-- Provee_Proveedor_Producto
+-- -- 1
+-- UPDATE "Provee_Proveedor_Producto"
+--    SET id_producto = 35
+--  WHERE id_producto = 37;
+--
+-- -- 2
+-- UPDATE "Provee_Proveedor_Producto"
+--    SET id_producto = 35
+--  WHERE rfc_proveedor = 'JTXE800199CET';
+--
+--
+-- Proveedor 
+-- --select * from "Proveedor"
+-- --1
+-- UPDATE "Proveedor"
+-- SET nombre_proveedor = 'Diverticompu'
+-- WHERE rfc_proveedor = 'JTXE800199CET';
+-- 
+-- --2
+-- UPDATE "Proveedor"
+-- SET giro_productos_proveedor ='SW' 
+-- WHERE rfc_proveedor = 'BUOE610713HN7';
+--
+--
+--
+-- Recibe_Mensajero_Pedido 
+-- -- select * from "Recibe_Mensajero_Pedido"
+-- --1
+-- UPDATE "Recibe_Mensajero_Pedido"
+-- SET numero_pedido = 375
+-- WHERE numero_pedido = 410 AND rfc_mensajero = 'AUBR550904LCA';
+-- 
+-- --2
+-- UPDATE "Recibe_Mensajero_Pedido"
+-- SET numero_pedido = 411
+-- WHERE numero_pedido = 408 AND rfc_mensajero = 'MMRA860314MPO';
+-- 
+--
+--
+-- Solicita_Pedido_Producto
+-- --select * from "Solicita_Pedido_Producto"
+-- 
+-- --1
+-- UPDATE "Solicita_Pedido_Producto"
+-- SET numero_pedido =369
+-- WHERE id_producto = 407;
+-- 
+-- --2
+-- UPDATE "Solicita_Pedido_Producto"
+-- SET Id_producto =800 
+-- WHERE  numero_pedido = 274;
+-- 
+--
+--
+-- Tarjeta_Grafica
+-- --SELECT * FROM "Tarjeta_Grafica"
+-- 
+-- --1
+-- UPDATE "Tarjeta_Grafica"
+-- SET memoria_ram_tarjeta_grafica ='64GB'
+-- WHERE id_producto = '550';
+--  
+-- --2
+-- UPDATE "Tarjeta_Grafica"
+-- SET memoria_ram_tarjeta_grafica ='32GB'
+-- WHERE id_producto = 160 OR id_tarjeta_grafica=7;
+-- 
+-- 
+--
+-- Tarjeta_de_Red
+-- --SELECT * FROM "Tarjeta_Grafica"
+-- 
+-- --1
+-- UPDATE "Tarjeta_de_Red"
+-- SET velocidad_transferencia_tarjeta_de_red = 600
+-- WHERE id_producto = 118 AND id_tarjeta_de_red = 2;
+--  
+-- --2
+-- UPDATE "Tarjeta_de_Red"
+-- SET id_producto = 165
+-- WHERE id_producto = 166 AND id_tarjeta_de_red = 8;
+-- 
+-- 
+-- Tarjeta_de_Sonido
+-- --1
+-- UPDATE "Tarjeta_de_Sonido"
+-- SET salidas_tarjeta_sonido = 4
+-- WHERE id_producto = 164;
+--
+-- --2
+-- UPDATE "Tarjeta_de_Sonido"
+-- SET salidas_tarjeta_sonido = 4
+-- WHERE id_producto = 164;
+--
+--
+--
+-- Telefono_Cliente
+-- --1
+-- UPDATE "Telefono_Cliente"
+-- SET rfc_cliente = 'NABC080798CVD'
+-- WHERE telefono_cliente = 43821571;
+--
+-- --2
+-- UPDATE "Telefono_Cliente"
+-- SET telefono_cliente = 65124567
+-- WHERE rfc_cliente = 'LOJP910202HDF';
+--
+--
+--
+-- Telefono_Proveedor
+-- --1
+-- UPDATE "Telefono_Proveedor"
+-- SET telefono_proveedor = 55436789
+-- WHERE rfc_proveedor = 'PRXJ950789KNM';
+--
+-- --2
+-- UPDATE "Telefono_Proveedor"
+-- SET rfc_proveedor = 'NAMC850792RTE'
+-- WHERE telefono_proveedor = 54739105;
+--
+--
+--
+-- Tipo_Audio_Tarjeta_Sonido
+-- --1
+-- UPDATE "Tipo_Audio_Tarjeta_Sonido"
+-- SET tipo_audio = 'Sound Blaster 5.0'
+-- WHERE tipo_audio = 'Sound Blaster 5.1' AND id_tarjeta_de_sonido = 4;
+--
+-- --2
+-- UPDATE "Tipo_Audio_Tarjeta_Sonido"
+-- SET tipo_audio = 'Dolby 2.1'
+-- WHERE id_tarjeta_de_sonido = 6;

@@ -4,10 +4,10 @@
 -- Cliente
 -- -- 1
 -- DELETE FROM "Cliente"
---  WHERE apellido_paterno_cliente = 'Cano';
+--  WHERE apellido_paterno_cliente = 'Rodriguez';
 -- -- 2 
 -- DELETE FROM "Cliente"
---  WHERE rfc_cliente = 'LOJP910202HDF';
+--  WHERE rfc_cliente = 'ALBA110391DCG';
 
 
 
@@ -43,10 +43,10 @@
 
 -- Correo_Proveedor
 -- -- 1
--- DELETE FROM "Proveedor"
+-- DELETE FROM "Correo_Proveedor"
 -- WHERE rfc_proveedor = 'ROTR450221MDF';
 -- -- 2
--- DELETE FROM "Proveedor"
+-- DELETE FROM "Correo_Proveedor"
 -- WHERE correo_proveedor = 'compuventas_soporte@compuventas.com';
 
 
@@ -196,17 +196,17 @@
 -- Pago
 -- -- 1
 -- DELETE FROM "Pago"
--- WHERE id_producto = 307;
+-- WHERE numero_pago = 307;
 -- -- 2   
 -- DELETE FROM "Pago"
--- WHERE id_producto = 301 AND cantidad_pago = 20000; 
+-- WHERE numero_pago = 301 AND cantidad_pago = 20000; 
 
 
 
 -- Pedido
 -- -- 1
--- DELETE FROM "Pedido"
--- WHERE cantidad_pedido <= 4500;
+-- -- DELETE FROM "Pedido"
+-- -- WHERE cantidad_pedido = 4500;
 -- -- 2   
 -- DELETE FROM "Pedido"
 -- WHERE  rfc_cliente = 'ARAA800221MDF';
@@ -278,8 +278,8 @@
 -- DELETE FROM "Solicita_Pedido_Producto"
 -- WHERE id_producto = 407;
 -- -- 2
--- DELETE FROM "Solicita_Pedido_Producto"
--- WHERE numero_pedido = 275;
+DELETE FROM "Solicita_Pedido_Producto"
+WHERE numero_pedido = 275;
 
 
 
@@ -316,10 +316,10 @@
 
 -- Telefono_Cliente
 -- -- 1
--- DELETE FROM "Tarjeta_de_Sonido"
+-- DELETE FROM "Telefono_Cliente"
 -- WHERE telefono_cliente = 57418594;
 -- -- 2
--- DELETE FROM "Tarjeta_de_Sonido"
+-- DELETE FROM "Telefono_Cliente"
 -- WHERE rfc_cliente = 'LOJP910202HDF';
 
 

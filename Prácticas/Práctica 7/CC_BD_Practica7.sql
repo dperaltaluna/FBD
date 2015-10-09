@@ -599,9 +599,9 @@ ALTER TABLE "Tipo_Audio_Tarjeta_Sonido" OWNER TO postgres;
 COPY "Cliente" (rfc_cliente, nombre_cliente, apellido_paterno_cliente, apellido_materno_cliente, fecha_nacimiento_cliente, nombre_calle_cliente, colonia_cliente, delegacion_cliente, estado_cliente, ciudad_cliente, numero_interior_cliente) FROM stdin;
 LELA100598HDF	Antonio	López	Letran	1088-09-10	Las Palmas	Malinche	Magdalena Contreras	Distrito Federal	Distrito Federal	10
 CACA010581MDF	Anastacia	Cano	Calvo	1981-05-01	Puente Viejo	Rosal	Tlahuac	Distrito Federal	Distrito Federal	20
-MONR980520HDF	Raul	Moreno	Noriega	1993-05-20	Alfa	La Lola	Roble	Distrito Federal	Distrito Federal	111
-LOJP910202HDF	Pavel	Jareno	Lopez	1991-02-02	Bola	Tabacalera	Venustiano Carranza	Distrito Federal	Distrito Federal	28
 ARAA800221MDF	Ana	Alcala	Arguedas	1980-02-21	Merced	Centro	Azcapotzalco	Distrito Federal	Distrito Federal	659
+LOJP910202HDF	Pavel	Jareno	Lopez	1991-02-02	Bola	Nápoles	Venustiano Carranza	Distrito Federal	Distrito Federal	28
+MONR980520HDF	Pánfilo	Paredes	Polares	1993-05-20	Alfa	La Lola	Roble	Distrito Federal	Distrito Federal	111
 \.
 
 
@@ -611,10 +611,8 @@ ARAA800221MDF	Ana	Alcala	Arguedas	1980-02-21	Merced	Centro	Azcapotzalco	Distrito
 
 COPY "Compatibilidad_Procesador_Motherboard" (id_producto, id_motherboard) FROM stdin;
 1	5
-2	4
-3	2
-4	1
-5	3
+1	1
+3	1
 \.
 
 
@@ -623,12 +621,9 @@ COPY "Compatibilidad_Procesador_Motherboard" (id_producto, id_motherboard) FROM 
 --
 
 COPY "Componente_Pedido" (numero_pedido, componente) FROM stdin;
-45	Teclado
-98	Teclado HP
 77	Disco Duro Kingston
 78	Disco Duro Kingston
 64	Motherboard Asus
-77	Mouse HP
 \.
 
 
@@ -637,8 +632,6 @@ COPY "Componente_Pedido" (numero_pedido, componente) FROM stdin;
 --
 
 COPY "Correo_Cliente" (rfc_cliente, correo_cliente) FROM stdin;
-MONR980520HDF	mon98@outlook.com
-LOJP910202HDF	plopez@gmail.com
 CACA010581MDF	canoanastacia@outlook.com
 ARAA800221MDF	ana_1980@yahoo.com.mx
 LELA100598HDF	tonololetran@gmail.com
@@ -651,10 +644,8 @@ LELA100598HDF	tonololetran@gmail.com
 
 COPY "Correo_Proveedor" (rfc_proveedor, correo_proveedor) FROM stdin;
 ARAB900221MNP	soluciones_computacion@soluciones.com.mx
-PRAF600429HDG	compuventas_soporte@compuventas.com
-FADE900224HDG	sales@compuworld.com
-MANE700429HDF	contactoventas@compuventas.com
-ROTR450221MDF	soluciones_computacion@soluciones.com.mx
+ABNA880221MPP	contactoventas@compuventas.com
+FADE900224HDG	fade@ciencias.unam.mx
 \.
 
 
@@ -663,11 +654,9 @@ ROTR450221MDF	soluciones_computacion@soluciones.com.mx
 --
 
 COPY "Disco_Duro" (id_producto, tipo_disco_duro, id_disco_duro) FROM stdin;
-22	SATA	1
-71	SSHD	3
-18	SATA	2
 34	SSHD	5
-58	SATA	4
+22	SSHD	1
+100	SATA	2
 \.
 
 
@@ -676,11 +665,8 @@ COPY "Disco_Duro" (id_producto, tipo_disco_duro, id_disco_duro) FROM stdin;
 --
 
 COPY "Dispositivo_de_Entrada" (id_dispositivo_de_entrada, id_producto, tipo_dispositivo_de_entrada) FROM stdin;
-5	54	Mouse
-3	51	Teclado
-16	89	Escaner
 18	38	Teclado
-20	93	Mouse
+3	51	Audífonos
 \.
 
 
@@ -691,9 +677,7 @@ COPY "Dispositivo_de_Entrada" (id_dispositivo_de_entrada, id_producto, tipo_disp
 COPY "Dispositivo_de_Salida" (id_dispositivo_de_salida, id_producto, tipo_dispositivo_de_salida) FROM stdin;
 2	61	Impresora
 4	63	Monitor
-5	72	Impresora
-3	73	Monitor
-1	74	Impresora
+6	72	Audífonos
 \.
 
 
@@ -702,11 +686,9 @@ COPY "Dispositivo_de_Salida" (id_dispositivo_de_salida, id_producto, tipo_dispos
 --
 
 COPY "Entrega_Mensajero_Cliente" (rfc_cliente, rfc_mensajero) FROM stdin;
-MONR980520HDF	MMRA860314MPO
-LOJP910202HDF	PCRB910214POC
 LELA100598HDF	AUBR550904LCA
 ARAA800221MDF	EISR800930CQ4
-CACA010581MDF	MAFA710212V22
+MNAM980520HDF	MAFA710212V22
 \.
 
 
@@ -715,11 +697,10 @@ CACA010581MDF	MAFA710212V22
 --
 
 COPY "Entrega_Mensajero_Pedido" (numero_pedido, rfc_mensajero) FROM stdin;
-23	JTCA870499PJK
-46	YZDB850976FLD
-71	AAAC591128UK7
 72	BAAA720623EJ3
 73	CAAA460217IL4
+71	YZDB850976FLD
+79	JTCA870499PJK
 \.
 
 
@@ -728,11 +709,9 @@ COPY "Entrega_Mensajero_Pedido" (numero_pedido, rfc_mensajero) FROM stdin;
 --
 
 COPY "Equipo_Armado" (id_equipo_armado, id_producto, id_disco_duro, id_monitor, id_tarjeta_de_sonido, id_dispositivo_de_salida, id_dispositivo_de_entrada, id_tarjeta_de_red, id_gabinete, id_motherboard, id_tarjeta_grafica, id_memoria_ram, id_procesador, numero_pedido) FROM stdin;
-2	102	3	4	2	3	4	2	6	3	2	7	2	201
-4	105	4	2	1	5	3	1	2	2	1	5	3	205
 8	106	13	14	12	13	14	12	16	13	12	17	12	201
-10	107	24	22	21	25	23	21	22	22	21	25	23	205
-12	108	34	32	31	35	33	31	32	32	31	35	33	201
+2	102	3	4	2	3	4	2	6	3	31	25	2	201
+4	105	3	32	31	5	3	1	2	2	1	5	3	205
 \.
 
 
@@ -741,11 +720,8 @@ COPY "Equipo_Armado" (id_equipo_armado, id_producto, id_disco_duro, id_monitor, 
 --
 
 COPY "Equipo_Armado_Dispositivo_de_Entrada" (id_dispositivo_de_entrada, id_equipo_armado) FROM stdin;
-2	2
 2	4
 10	6
-10	8
-12	10
 \.
 
 
@@ -754,11 +730,9 @@ COPY "Equipo_Armado_Dispositivo_de_Entrada" (id_dispositivo_de_entrada, id_equip
 --
 
 COPY "Equipo_Armado_Dispositivo_de_Salida" (id_dispositivo_de_salida, id_equipo_armado) FROM stdin;
-1	2
-1	4
-21	25
 21	27
-22	29
+24	25
+23	2
 \.
 
 
@@ -767,11 +741,9 @@ COPY "Equipo_Armado_Dispositivo_de_Salida" (id_dispositivo_de_salida, id_equipo_
 --
 
 COPY "Gabinete" (id_gabinete, id_producto, fuente_de_poder_gabinete, material_ganinete, color_gabinete) FROM stdin;
-1	71	AT	Cobre	Negro
 3	77	ATX	Acero	Plata
-2	88	ATx	Cobre	Negro
 5	87	ATX	Rojo	Plata
-4	86	ATX	Verde	Plata
+4	86	ATX	Oro	Blanco
 \.
 
 
@@ -780,11 +752,9 @@ COPY "Gabinete" (id_gabinete, id_producto, fuente_de_poder_gabinete, material_ga
 --
 
 COPY "Interfaz_Tarjeta_de_Red" (id_tarjeta_de_red, interfaz_tarjeta_de_red) FROM stdin;
-1	AUI
 2	MII
-3	AUI
-4	MII
-5	AUI
+1	MII
+6	AUI
 \.
 
 
@@ -793,11 +763,9 @@ COPY "Interfaz_Tarjeta_de_Red" (id_tarjeta_de_red, interfaz_tarjeta_de_red) FROM
 --
 
 COPY "Memoria_Ram" (id_memoria_ram, id_producto, capacidad_memoria_ram) FROM stdin;
-1	82	12GB
-2	84	8GB
 3	141	12GB
-4	142	4GB
-5	143	16GB
+1	82	1T
+2	84	30MB
 \.
 
 
@@ -806,8 +774,6 @@ COPY "Memoria_Ram" (id_memoria_ram, id_producto, capacidad_memoria_ram) FROM std
 --
 
 COPY "Mensajero" (nombre_mensajero, apellido_paterno_mensajero, apellido_materno_mensajero, correo_mensajero, rfc_mensajero) FROM stdin;
-Victor	Rodriguez	Espinoza	ver67@outlook.com	VBER670876CVA
-Nestor	Torres	Villalba	nestor_torres@outlook.com	NETF800287AVR
 Maria	Alcaraz	Andrade	mariaalca@outlook.com	AAAC640907230
 Patricia	Barba	Alavarez	patibarba@gmail.com	BAAP540131AK9
 Gerardo	Avalos	Cancino	CancinoGer@outlook.com	CAAG570304EYA
@@ -819,11 +785,9 @@ Gerardo	Avalos	Cancino	CancinoGer@outlook.com	CAAG570304EYA
 --
 
 COPY "Monitor" (id_producto, es_touch_monitor, tipo_monitor, id_monitor, tamanio_monitor, resolucion_monitor) FROM stdin;
-19	f	LCD	16	27 pulgadas         	1600x900            
 21	f	AMOLED	18	22 pulgadas         	1280x800            
-144	f	LCD	20	32 pulgadas         	1600x900            
 145	f	AMOLED	22	40 pulgadas         	1280x800            
-146	f	LCD	24	29 pulgadas         	1600x900            
+19	f	LCD	16	80 pulgadas         	1280x800            
 \.
 
 
@@ -832,11 +796,10 @@ COPY "Monitor" (id_producto, es_touch_monitor, tipo_monitor, id_monitor, tamanio
 --
 
 COPY "Motherboard" (id_motherboard, id_producto, bus_motherboard, compatibilidad_marca_motherboard, capacidad_memoria_motherboard) FROM stdin;
-2	88	bus del sistema	Asus	32GB      
-2	85	Bus de control	Intel	32GB      
-3	147	Bus de sistema	Amd	16GB      
-4	148	Bus de control	Intel	8GB       
 5	149	Bus de sistema	Amd	16GB      
+2	88	bus del sistema	Asus	Intel     
+2	85	Bus de control	Intel	Intel     
+3	147	Bus de sistema	Amd	16GB      
 \.
 
 
@@ -845,11 +808,9 @@ COPY "Motherboard" (id_motherboard, id_producto, bus_motherboard, compatibilidad
 --
 
 COPY "Pago" (numero_pago, rfc_cliente, numero_pedido, fecha_pago, cantidad_pago) FROM stdin;
-301	LELA100598HDF	201	1998-09-10	20000
-305	LOJP910202HDF	205	1991-02-02	20000
 306	LELA100598HDF	201	1998-09-11	1000
-307	LELA100598HDF	201	1998-09-12	2000
-308	LOJP910202HDF	205	1998-02-13	3000
+305	LOJP910202HDF	205	1991-02-02	30500
+308	LOJP910202HDF	205	1998-02-13	30500
 \.
 
 
@@ -858,11 +819,9 @@ COPY "Pago" (numero_pago, rfc_cliente, numero_pedido, fecha_pago, cantidad_pago)
 --
 
 COPY "Pedido" (numero_pedido, rfc_cliente, fecha_pedido, cantidad_pedido) FROM stdin;
-201	CACA010581MDF	1981-05-01	15000
 205	MONR980520HDF	1993-05-20	20000
 209	LOJP910202HDF	2004-07-09	5000
-216	ARAA800221MDF	2013-05-20	8000
-217	LELA100598HDF	2011-02-16	4500
+201	CACA010581MDF	1981-05-01	1000
 \.
 
 
@@ -871,11 +830,9 @@ COPY "Pedido" (numero_pedido, rfc_cliente, fecha_pedido, cantidad_pedido) FROM s
 --
 
 COPY "Procesador" (id_procesador, id_producto, nucleos_logicos_procesador, nucleos_fisicos_procesador, modelo_procesador, capacidad_memoria_procesador, cache_procesador) FROM stdin;
-4	66	7	6	AMD Fusion	32 bits	512KB
-6	68	5	4	Intel Core	64 bits	2MB
 8	148	4	8	AMD Fusion	32 bits	512KB
-10	149	2	10	Intel Core	64 bits	2MB
-12	150	2	12	AMD Fusion	32 bits	2MB
+4	66	7	3	AMD Fusion	32 bits	512KB
+6	68	5	1	AMD Fusion	64 bits	2MB
 \.
 
 
@@ -884,11 +841,9 @@ COPY "Procesador" (id_procesador, id_producto, nucleos_logicos_procesador, nucle
 --
 
 COPY "Producto" (id_producto, marca_producto, precio_producto, descripcion_producto) FROM stdin;
-204	Intel	7000	Procesador de 64 bits de 5 nucleos.
-207	AMD	6500	Procesador de 32 bits de 4 nucleos.
 151	Intel	8000	Procesador de 64 bits de 5 nucleos.
-152	AMD	9000	Procesador de 64 bits de 6 nucleos.
 153	Intel	10000	Procesador de 64 bits de 7 nucleos.
+152	AMD	15000	Procesador de 64 bits de 6 nucleos.
 \.
 
 
@@ -897,11 +852,9 @@ COPY "Producto" (id_producto, marca_producto, precio_producto, descripcion_produ
 --
 
 COPY "Protocolo_Tarjeta_de_Red" (id_tarjeta_de_red, protocolo_tarjeta_de_red) FROM stdin;
-4	TCP/IP
 4	Ethernet
+3	TCP/IP
 5	TCP/IP
-6	Ethernet
-7	TCP/IP
 \.
 
 
@@ -911,10 +864,8 @@ COPY "Protocolo_Tarjeta_de_Red" (id_tarjeta_de_red, protocolo_tarjeta_de_red) FR
 
 COPY "Provee_Proveedor_Producto" (id_producto, rfc_proveedor) FROM stdin;
 36	PRXJ950789KNM
-39	JTXE800199CET
-37	ARAB900221MNP
 38	PRAF600429HDG
-40	MANE700429HDF
+35	ARAB900221MNP
 \.
 
 
@@ -924,10 +875,9 @@ COPY "Provee_Proveedor_Producto" (id_producto, rfc_proveedor) FROM stdin;
 
 COPY "Proveedor" (rfc_proveedor, nombre_proveedor, giro_productos_proveedor) FROM stdin;
 PRXJ950789KNM	Compu Soluciones	Hardware
-JTXE800199CET	Dell	Hardware
 CAAJ650520JF6	Compu Soluciones	Hardware
-BUOE610713HN7	Compuworld	Hardware
 BUOA600421237	Compu Ventas	Hardware
+JTXE800199CET	Diverticompu	Hardware
 \.
 
 
@@ -936,11 +886,13 @@ BUOA600421237	Compu Ventas	Hardware
 --
 
 COPY "Recibe_Mensajero_Pedido" (numero_pedido, rfc_mensajero) FROM stdin;
-403	VBER670876CVA
+500	VBER670876CVA
+500	NETF800287AVR
+500	MMRA860314MPO
+500	AUBR550904LCA
 407	NETF800287AVR
-408	MMRA860314MPO
-409	PCRB910214POC
-410	AUBR550904LCA
+375	AUBR550904LCA
+411	MMRA860314MPO
 \.
 
 
@@ -949,11 +901,9 @@ COPY "Recibe_Mensajero_Pedido" (numero_pedido, rfc_mensajero) FROM stdin;
 --
 
 COPY "Solicita_Pedido_Producto" (id_producto, numero_pedido) FROM stdin;
-407	368
 410	270
 155	272
-156	274
-157	275
+800	274
 \.
 
 
@@ -962,11 +912,9 @@ COPY "Solicita_Pedido_Producto" (id_producto, numero_pedido) FROM stdin;
 --
 
 COPY "Tarjeta_Grafica" (id_producto, id_tarjeta_grafica, memoria_ram_tarjeta_grafica) FROM stdin;
-550	3	12GB      
-557	7	8GB       
-158	14	1GB       
 159	16	2GB       
-160	18	1GB       
+550	3	64GB      
+160	18	32GB      
 \.
 
 
@@ -976,10 +924,8 @@ COPY "Tarjeta_Grafica" (id_producto, id_tarjeta_grafica, memoria_ram_tarjeta_gra
 
 COPY "Tarjeta_de_Red" (id_producto, id_tarjeta_de_red, velocidad_transferencia_tarjeta_de_red) FROM stdin;
 113	3	400
-118	2	800
-166	8	100
-167	9	100
-168	10	1000
+165	8	100
+118	2	600
 \.
 
 
@@ -988,10 +934,8 @@ COPY "Tarjeta_de_Red" (id_producto, id_tarjeta_de_red, velocidad_transferencia_t
 --
 
 COPY "Tarjeta_de_Sonido" (id_producto, entradas_tarjeta_sonido, salidas_tarjeta_sonido, id_tarjeta_de_sonido) FROM stdin;
-116	4	3	2
 163	4	5	4
-164	5	2	5
-165	5	3	6
+164	5	4	5
 \.
 
 
@@ -1001,10 +945,8 @@ COPY "Tarjeta_de_Sonido" (id_producto, entradas_tarjeta_sonido, salidas_tarjeta_
 
 COPY "Telefono_Cliente" (rfc_cliente, telefono_cliente) FROM stdin;
 LELA100598HDF	65882691
-LOJP910202HDF	54813462
 ARAA800221MDF	62517934
-CACA010581MDF	43821571
-MONR980520HDF	57418594
+NABC080798CVD	43821571
 \.
 
 
@@ -1014,10 +956,9 @@ MONR980520HDF	57418594
 
 COPY "Telefono_Proveedor" (rfc_proveedor, telefono_proveedor) FROM stdin;
 JTXE800199CET	56921054
-PRXJ950789KNM	54221138
 FADE900224HDG	53864702
-MANE700429HDF	54739105
-ROTR450221MDF	58763155
+PRXJ950789KNM	55436789
+NAMC850792RTE	54739105
 \.
 
 
@@ -1028,9 +969,7 @@ ROTR450221MDF	58763155
 COPY "Tipo_Audio_Tarjeta_Sonido" (id_tarjeta_de_sonido, tipo_audio) FROM stdin;
 3	Sound Blaster 5.1
 1	Dolby 2.0
-4	Sound Blaster 5.1
-5	Dolby 2.0
-6	Dolby 2.0
+4	Sound Blaster 5.0
 \.
 
 

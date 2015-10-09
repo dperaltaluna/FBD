@@ -75,6 +75,34 @@
 -- 	'Merced','Centro','Azcapotzalco','Distrito Federal','Distrito Federal',659);
 -- 
 -- 
+--6
+-- INSERT INTO "Cliente" (rfc_cliente, 
+-- 	nombre_cliente, 
+-- 	apellido_paterno_cliente, 
+-- 	apellido_materno_cliente,
+-- 	fecha_nacimiento_cliente,
+-- 	nombre_calle_cliente,
+-- 	colonia_cliente,
+-- 	delegacion_cliente,
+-- 	estado_cliente,
+-- 	ciudad_cliente,
+-- 	numero_interior_cliente)
+-- 	VALUES('ALBA110391DCG','Ana','López','Beltran', '10-09-2014',
+-- 	'Las Granjas','Colibri','Magdalena Contreras','Distrito Federal','Distrito Federal',10);
+-- 7
+-- INSERT INTO "Cliente" (rfc_cliente, 
+-- 	nombre_cliente, 
+-- 	apellido_paterno_cliente, 
+-- 	apellido_materno_cliente,
+-- 	fecha_nacimiento_cliente,
+-- 	nombre_calle_cliente,
+-- 	colonia_cliente,
+-- 	delegacion_cliente,
+-- 	estado_cliente,
+-- 	ciudad_cliente,
+-- 	numero_interior_cliente)
+-- 	VALUES('ZART820276XDC','Zara','Rodriguez','Torres', '11-10-2013',
+-- 	'Tomás','Delfin','Magdalena Contreras','Distrito Federal','Distrito Federal',18);
 
 -- Compatibilidad_Procesador
 
@@ -783,7 +811,7 @@
 
 
 -- Recibe_Mensajero_Pedido
--- -- 1
+-- 1
 -- INSERT INTO "Recibe_Mensajero_Pedido"(
 --             numero_pedido, rfc_mensajero)
 --     VALUES (403, 'VBER670876CVA');
