@@ -10,15 +10,15 @@ SET check_function_bodies = false;
 SET client_min_messages = warning;
 
 --
--- Name: CC_BD_Practica7; Type: DATABASE; Schema: -; Owner: postgres
+-- Name: CC_BD_Practica8; Type: DATABASE; Schema: -; Owner: postgres
 --
 
-CREATE DATABASE "CC_BD_Practica7" WITH TEMPLATE = template0 ENCODING = 'UTF8' LC_COLLATE = 'Spanish_Spain.1252' LC_CTYPE = 'Spanish_Spain.1252';
+CREATE DATABASE "CC_BD_Practica8" WITH TEMPLATE = template0 ENCODING = 'UTF8' LC_COLLATE = 'Spanish_Spain.1252' LC_CTYPE = 'Spanish_Spain.1252';
 
 
-ALTER DATABASE "CC_BD_Practica7" OWNER TO postgres;
+ALTER DATABASE "CC_BD_Practica8" OWNER TO postgres;
 
-\connect "CC_BD_Practica7"
+\connect "CC_BD_Practica8"
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
