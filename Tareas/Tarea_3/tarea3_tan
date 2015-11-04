@@ -1,0 +1,75 @@
+﻿--Ejercicio 3
+--Todos los datos de los jugadores (Runner) tales 
+--que son del equipo PUMAS CU y su año de 
+--adquisición
+--es 2010.
+select * 
+from runner as r left join jugador as j 
+	on r.id_jugador=j.id_jugador
+	left join jugador_equipo as je
+	on j.id_jugador=je.id_jugador
+	left join equipo as e
+	on  je.id_equipo=e.id_equipo
+where nombre_equipo like '%PUMAS CU%'
+	and anyo_adquirido = 2010
+	and j.id_jugador is not null
+	and e.id_equipo is not null;
+
+
+--Ejercicio 7
+--Los nombres de las ciudades y su población 
+--de habitantes tales que su ingreso promedio 
+--sea 15000 o 25000.
+
+select nombre_ciudad, habitantes
+from ciudad
+where ingreso_promedio = 15000 
+	or ingreso_promedio = 25000; 
+
+--Ejercicio 11
+--¿Cuántos jugadores con apellido paterno Pérez hay?
+select count(*)
+from jugador
+where apellido_jugador like '%Pérez%';
+
+--Ejercicio 15
+--¿De qué división hay más equipos?
+select sc.division, max(sc.c)
+from(
+	select division, count(division) as c
+	from equipo
+	group by division
+	) as sc
+group by sc.division, sc.c;
+
+--Ejercicio 19
+--Datos de los entrenadores que han entrenado a más de un equipo.
+select *
+from entrenador
+where id_entrenador in
+	(
+	select id_entrenador
+	from (
+		select id_entrenador,count(id_equipo) c
+		from equipo_entrenador
+		group by id_entrenador,id_equipo
+		having count(id_equipo)>1
+		order by 1
+		) as ee
+	);
+
+--Ejercicio 23
+--Nombre de los entrenadores que han participado en todos los equipos.
+
+select nombre_entrenador
+from entrenador
+where id_entrenador in
+	(
+	select id_entrenador
+	from
+		(select id_entrenador,count(id_equipo)
+			from equipo_entrenador
+			group by id_entrenador,id_equipo
+			having count(id_equipo)=(select count(*) from equipo)
+			order by 1) as ee
+	);

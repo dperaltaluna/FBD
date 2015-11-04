@@ -1,4 +1,13 @@
-﻿---Ejercicio 1 
+﻿--====================================================
+--Tarea 3. Los integrantes somos:
+
+--    Nequiz Meza Antony Miguel
+--    Peralta Luna Diego Alejandro 
+--    Romero Rodriguez Gabriel Eduardo
+--    Vega Velázquez Alma Tania
+--====================================================
+
+---Ejercicio 1 
 --Todos los datos de los equipos.
 
 SELECT * FROM equipo 
@@ -12,7 +21,21 @@ SELECT *
 FROM "estadio"
 WHERE anyo_construccion>1978;
 
-
+--Ejercicio 3
+--Todos los datos de los jugadores (Runner) tales 
+--que son del equipo PUMAS CU y su año de 
+--adquisición es 2010.
+select * 
+from runner as r left join jugador as j 
+	on r.id_jugador=j.id_jugador
+	left join jugador_equipo as je
+	on j.id_jugador=je.id_jugador
+	left join equipo as e
+	on  je.id_equipo=e.id_equipo
+where nombre_equipo like '%PUMAS CU%'
+	and anyo_adquirido = 2010
+	and j.id_jugador is not null
+	and e.id_equipo is not null;
 
 -- Ejercicio 4
 -- Devuelve una tabla con el nombre de todos los equipos y 
@@ -42,7 +65,15 @@ FROM "jugador_equipo"
 NATURAL JOIN "jugador"
 WHERE anyo_adquirido = 2003 or anyo_adquirido = 2006;
 
+--Ejercicio 7
+--Los nombres de las ciudades y su población 
+--de habitantes tales que su ingreso promedio 
+--sea 15000 o 25000.
 
+select nombre_ciudad, habitantes
+from ciudad
+where ingreso_promedio = 15000 
+	or ingreso_promedio = 25000; 
 
 -- Ejercicio 8
 -- Devuelve una tabla con los nombres de los jugadores y su fecha de adquisicion
@@ -76,7 +107,11 @@ SELECT *
 FROM "equipo"
 WHERE record_g = (SELECT MAX(record_g) FROM "equipo");
 
-
+--Ejercicio 11
+--¿Cuántos jugadores con apellido paterno Pérez hay?
+select count(*)
+from jugador
+where apellido_jugador like '%Pérez%';
 
 -- Ejercicio 12
 -- Devuelve una tabla con el numero de jugadores con 
@@ -102,6 +137,15 @@ FROM equipo
 WHERE division = 'Oeste' or division = 'Sur' or division = 'Este' or division = 'Norte' 
 GROUP BY division;
 
+--Ejercicio 15
+--¿De qué división hay más equipos?
+select sc.division, max(sc.c)
+from(
+	select division, count(division) as c
+	from equipo
+	group by division
+	) as sc
+group by sc.division, sc.c;
 
 
 -- Ejercicio 16
@@ -132,6 +176,21 @@ FROM (SELECT * FROM "ciudad" NATURAL JOIN "equipo_ciudad") AS "Ciudad_mayor_gana
 NATURAL JOIN "equipo"
 WHERE record_g = (SELECT MAX(record_g) FROM "equipo");
 
+--Ejercicio 19
+--Datos de los entrenadores que han entrenado a más de un equipo.
+select *
+from entrenador
+where id_entrenador in
+	(
+	select id_entrenador
+	from (
+		select id_entrenador,count(id_equipo) c
+		from equipo_entrenador
+		group by id_entrenador,id_equipo
+		having count(id_equipo)>1
+		order by 1
+		) as ee
+	);
 
 
 -- Ejercicio 20
@@ -170,6 +229,21 @@ FROM (SELECT * FROM "jugador_equipo" NATURAL JOIN "jugador") AS "T1"
 NATURAL JOIN "equipo"
 WHERE nickname_equipo = 'Pumas-Acatlán';
 
+--Ejercicio 23
+--Nombre de los entrenadores que han participado en todos los equipos.
+
+select nombre_entrenador
+from entrenador
+where id_entrenador in
+	(
+	select id_entrenador
+	from
+		(select id_entrenador,count(id_equipo)
+			from equipo_entrenador
+			group by id_entrenador,id_equipo
+			having count(id_equipo)=(select count(*) from equipo)
+			order by 1) as ee
+	);
 
 
 --Ejercicio 24
