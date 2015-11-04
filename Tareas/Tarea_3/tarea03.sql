@@ -232,3 +232,22 @@ SELECT * FROM EQUIPO WHERE id_equipo IN
 	(SELECT id_equipo FROM equipo NATURAL JOIN partido 
 		where semana = 2 OR semana = 4 OR semana = 6 OR semana = 8 AND id_equipo = id_equipo_v)
 
+---Ejercicio 30
+---Los datos de todos los jugadores que hayan jugado todos los partidos 
+---de las siguientes semanas: 1, 3, 6, 9, y 11. Utilizar la operación de división.
+SELECT * FROM jugador WHERE id_jugador IN 
+	(SELECT id_jugador FROM 
+		(SELECT id_jugador, COUNT(id_jugador) AS contador FROM
+
+			(SELECT id_jugador FROM jugador 
+			NATURAL JOIN jugador_equipo
+			NATURAL JOIN equipo
+			NATURAL JOIN partido 
+			where semana = 1 
+			AND semana = 3 
+			AND semana = 6 
+			AND semana = 9 
+			AND semana = 11) t1 
+		GROUP BY id_jugador
+		) t2
+		)
