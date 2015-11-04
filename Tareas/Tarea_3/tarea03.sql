@@ -209,6 +209,18 @@ FROM	(SELECT id_entrenador, count(*) as "Num_Entrenadores"
 	GROUP BY id_entrenador) as "Tabla_cuenta"
 NATURAL JOIN entrenador;
 
+---Ejercicio 28
+---Todos los datos de todos los entrenadores que hayan entrenado  a todos los equipos 
+SELECT * FROM 
+	entrenador
+NATURAL JOIN
+	(SELECT
+		e.id_entrenador,
+		COUNT(id_equipo)AS num
+	FROM
+		entrenador e INNER JOIN equipo_entrenador eq ON e.id_entrenador= eq.id_entrenador
+	GROUP BY e.id_entrenador) T1 where num IN (SELECT count(id_equipo) FROM equipo)
+
 
 
 ---Ejercicio 29
