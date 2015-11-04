@@ -35,3 +35,12 @@ SELECT id_jugador, apellido_jugador, nombre_jugador, fecha_nacimiento, universid
 FROM (SELECT * FROM "jugador_equipo" NATURAL JOIN "jugador") AS "T1"
 NATURAL JOIN "equipo"
 WHERE nickname_equipo = 'Pumas-Acatlán';
+
+-- Ejercicio 26 Nombre del equipo con mayor numero de entrenadores en su historia y todos los datos de esos entrenadores
+SELECT *
+FROM	(SELECT id_entrenador, count(*) as "Num_Entrenadores"
+	FROM (SELECT * FROM "entrenador" NATURAL JOIN "equipo_entrenador") AS "Entrena_Equipo"
+	NATURAL JOIN "equipo"
+	WHERE id_entrenador > 0
+	GROUP BY id_entrenador) as "Tabla_cuenta"
+NATURAL JOIN entrenador;
