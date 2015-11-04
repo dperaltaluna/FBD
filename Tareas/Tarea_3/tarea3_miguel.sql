@@ -28,3 +28,10 @@ SELECT nombre_ciudad, record_g
 FROM (SELECT * FROM "ciudad" NATURAL JOIN "equipo_ciudad") AS "Ciudad_mayor_ganados"
 NATURAL JOIN "equipo"
 WHERE record_g = (SELECT MAX(record_g) FROM "equipo");
+
+--Ejercicio 22 Todos los datos de los jugadores y numero de jugador que haya participado en el equipo Pumas-Acatlan
+
+SELECT id_jugador, apellido_jugador, nombre_jugador, fecha_nacimiento, universidad, numero
+FROM (SELECT * FROM "jugador_equipo" NATURAL JOIN "jugador") AS "T1"
+NATURAL JOIN "equipo"
+WHERE nickname_equipo = 'Pumas-Acatlán';
