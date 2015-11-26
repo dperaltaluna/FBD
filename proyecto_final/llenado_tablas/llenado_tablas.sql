@@ -1,4 +1,234 @@
-﻿---datos pedidos
+﻿--datos tarjeta de sonido
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (250,'2 ','firewire ');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (251,' 5.1 ',' pci ');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (252,' 7.1',' usb');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (253,'2 ','firewire ');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (254,' 5.1 ',' pci ');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (255,' 7.1',' usb');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (256,'2 ','firewire ');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (257,' 5.1 ',' pci ');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (258,' 7.1',' usb');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (259,'2 ','firewire ');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (260,' 5.1 ',' pci ');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (261,' 7.1',' usb');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (262,'2 ','firewire ');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (263,' 5.1 ',' pci ');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (264,' 7.1',' usb');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (265,'2 ','firewire ');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (266,' 5.1 ',' pci ');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (267,' 7.1',' usb');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (268,'2 ','firewire ');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (269,' 5.1 ',' pci ');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (270,' 7.1',' usb');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (271,'2 ','firewire ');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (272,' 5.1 ',' pci ');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (273,' 7.1',' usb');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (274,'2 ','firewire ');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (275,' 5.1 ',' pci ');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (276,' 7.1',' usb');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (277,'2 ','firewire ');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (278,' 5.1 ',' pci ');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (279,' 7.1',' usb');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (280,'2 ','firewire ');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (281,' 5.1 ',' pci ');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (282,' 7.1',' usb');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (283,'2 ','firewire ');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (284,' 5.1 ',' pci ');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (285,' 7.1',' usb');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (286,'2 ','firewire ');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (287,' 5.1 ',' pci ');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (288,' 7.1',' usb');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (289,'2 ','firewire ');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (290,' 5.1 ',' pci ');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (291,' 7.1',' usb');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (292,'2 ','firewire ');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (293,' 5.1 ',' pci ');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (294,' 7.1',' usb');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (295,'2 ','firewire ');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (296,' 5.1 ',' pci ');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (297,' 7.1',' usb');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (298,'2 ','firewire ');
+INSERT INTO "tarjeta_sonido" (id_producto,canales,interfaces) VALUES (299,' 5.1 ',' pci ');
+
+
+---datos tarjeta_red
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (201,' ethernet ','387');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (202,' 4g','073');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (203,'wifi ','517');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (204,' ethernet ','576');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (205,' 4g','722');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (206,'wifi ','183');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (207,' ethernet ','303');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (208,' 4g','459');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (209,'wifi ','400');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (210,' ethernet ','255');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (211,' 4g','743');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (212,'wifi ','085');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (213,' ethernet ','873');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (214,' 4g','620');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (215,'wifi ','873');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (216,' ethernet ','129');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (217,' 4g','651');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (218,'wifi ','362');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (219,' ethernet ','276');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (220,' 4g','868');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (221,'wifi ','027');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (222,' ethernet ','807');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (223,' 4g','215');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (224,'wifi ','333');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (225,' ethernet ','806');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (226,' 4g','009');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (227,'wifi ','616');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (228,' ethernet ','300');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (229,' 4g','465');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (230,'wifi ','188');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (231,' ethernet ','091');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (232,' 4g','067');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (233,'wifi ','424');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (234,' ethernet ','549');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (235,' 4g','282');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (236,'wifi ','398');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (237,' ethernet ','347');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (238,' 4g','647');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (239,'wifi ','777');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (240,' ethernet ','591');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (241,' 4g','820');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (242,'wifi ','080');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (243,' ethernet ','261');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (244,' 4g','382');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (245,'wifi ','807');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (246,' ethernet ','356');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (247,' 4g','697');
+INSERT INTO "tarjeta_red" (id_producto,interfaces,valocidad) VALUES (248,'wifi ','578');
+
+
+---datos tarjeta grafica
+INSERT INTO "tarjeta_grafica" (id_producto,memoria,marca) VALUES (175,'81 GB','nvidia ');
+INSERT INTO "tarjeta_grafica" (id_producto,memoria,marca) VALUES (176,'23 GB',' ati');
+INSERT INTO "tarjeta_grafica" (id_producto,memoria,marca) VALUES (177,'38 GB','nvidia ');
+INSERT INTO "tarjeta_grafica" (id_producto,memoria,marca) VALUES (178,'91 GB',' ati');
+INSERT INTO "tarjeta_grafica" (id_producto,memoria,marca) VALUES (179,'89 GB','nvidia ');
+INSERT INTO "tarjeta_grafica" (id_producto,memoria,marca) VALUES (180,'68 GB',' ati');
+INSERT INTO "tarjeta_grafica" (id_producto,memoria,marca) VALUES (181,'63 GB','nvidia ');
+INSERT INTO "tarjeta_grafica" (id_producto,memoria,marca) VALUES (182,'98 GB',' ati');
+INSERT INTO "tarjeta_grafica" (id_producto,memoria,marca) VALUES (183,'48 GB','nvidia ');
+INSERT INTO "tarjeta_grafica" (id_producto,memoria,marca) VALUES (184,'10 GB',' ati');
+INSERT INTO "tarjeta_grafica" (id_producto,memoria,marca) VALUES (185,'47 GB','nvidia ');
+INSERT INTO "tarjeta_grafica" (id_producto,memoria,marca) VALUES (186,'38 GB',' ati');
+INSERT INTO "tarjeta_grafica" (id_producto,memoria,marca) VALUES (187,'07 GB','nvidia ');
+INSERT INTO "tarjeta_grafica" (id_producto,memoria,marca) VALUES (188,'81 GB',' ati');
+INSERT INTO "tarjeta_grafica" (id_producto,memoria,marca) VALUES (189,'81 GB','nvidia ');
+INSERT INTO "tarjeta_grafica" (id_producto,memoria,marca) VALUES (190,'93 GB',' ati');
+INSERT INTO "tarjeta_grafica" (id_producto,memoria,marca) VALUES (191,'76 GB','nvidia ');
+INSERT INTO "tarjeta_grafica" (id_producto,memoria,marca) VALUES (192,'77 GB',' ati');
+INSERT INTO "tarjeta_grafica" (id_producto,memoria,marca) VALUES (193,'49 GB','nvidia ');
+INSERT INTO "tarjeta_grafica" (id_producto,memoria,marca) VALUES (194,'78 GB',' ati');
+INSERT INTO "tarjeta_grafica" (id_producto,memoria,marca) VALUES (195,'64 GB','nvidia ');
+INSERT INTO "tarjeta_grafica" (id_producto,memoria,marca) VALUES (196,'53 GB',' ati');
+INSERT INTO "tarjeta_grafica" (id_producto,memoria,marca) VALUES (197,'22 GB','nvidia ');
+INSERT INTO "tarjeta_grafica" (id_producto,memoria,marca) VALUES (198,'31 GB',' ati');
+INSERT INTO "tarjeta_grafica" (id_producto,memoria,marca) VALUES (199,'31 GB','nvidia ');
+
+
+
+---datos monitor
+INSERT INTO "monitor" (id_producto,tamano,tipo) VALUES (161,'78 inhh','lcd ');
+INSERT INTO "monitor" (id_producto,tamano,tipo) VALUES (162,'15 injh',' plasma ');
+INSERT INTO "monitor" (id_producto,tamano,tipo) VALUES (163,'95 indh','amoled');
+INSERT INTO "monitor" (id_producto,tamano,tipo) VALUES (164,'62 invh','lcd ');
+INSERT INTO "monitor" (id_producto,tamano,tipo) VALUES (165,'25 inbh',' plasma ');
+INSERT INTO "monitor" (id_producto,tamano,tipo) VALUES (166,'56 infh','amoled');
+INSERT INTO "monitor" (id_producto,tamano,tipo) VALUES (167,'34 inlh','lcd ');
+INSERT INTO "monitor" (id_producto,tamano,tipo) VALUES (168,'65 insh',' plasma ');
+INSERT INTO "monitor" (id_producto,tamano,tipo) VALUES (169,'87 invh','amoled');
+INSERT INTO "monitor" (id_producto,tamano,tipo) VALUES (170,'34 inch','lcd ');
+INSERT INTO "monitor" (id_producto,tamano,tipo) VALUES (171,'82 inth',' plasma ');
+INSERT INTO "monitor" (id_producto,tamano,tipo) VALUES (172,'21 inqh','amoled');
+INSERT INTO "monitor" (id_producto,tamano,tipo) VALUES (173,'44 invh','lcd ');
+INSERT INTO "monitor" (id_producto,tamano,tipo) VALUES (174,'40 inqh',' plasma ');
+INSERT INTO "monitor" (id_producto,tamano,tipo) VALUES (175,'95 infh','amoled');
+
+
+---datos memoria
+INSERT INTO "memoria_ram" (id_producto,capacidad,interfaz) VALUES (141,'07GB','sata ');
+INSERT INTO "memoria_ram" (id_producto,capacidad,interfaz) VALUES (142,'00GB',' ide ');
+INSERT INTO "memoria_ram" (id_producto,capacidad,interfaz) VALUES (143,'39GB','usb');
+INSERT INTO "memoria_ram" (id_producto,capacidad,interfaz) VALUES (144,'97GB','sata ');
+INSERT INTO "memoria_ram" (id_producto,capacidad,interfaz) VALUES (145,'03GB',' ide ');
+INSERT INTO "memoria_ram" (id_producto,capacidad,interfaz) VALUES (146,'06GB','usb');
+INSERT INTO "memoria_ram" (id_producto,capacidad,interfaz) VALUES (147,'68GB','sata ');
+INSERT INTO "memoria_ram" (id_producto,capacidad,interfaz) VALUES (148,'34GB',' ide ');
+INSERT INTO "memoria_ram" (id_producto,capacidad,interfaz) VALUES (149,'59GB','usb');
+INSERT INTO "memoria_ram" (id_producto,capacidad,interfaz) VALUES (150,'46GB','sata ');
+INSERT INTO "memoria_ram" (id_producto,capacidad,interfaz) VALUES (151,'96GB',' ide ');
+INSERT INTO "memoria_ram" (id_producto,capacidad,interfaz) VALUES (152,'56GB','usb');
+INSERT INTO "memoria_ram" (id_producto,capacidad,interfaz) VALUES (153,'42GB','sata ');
+INSERT INTO "memoria_ram" (id_producto,capacidad,interfaz) VALUES (154,'63GB',' ide ');
+INSERT INTO "memoria_ram" (id_producto,capacidad,interfaz) VALUES (155,'07GB','usb');
+INSERT INTO "memoria_ram" (id_producto,capacidad,interfaz) VALUES (156,'69GB','sata ');
+INSERT INTO "memoria_ram" (id_producto,capacidad,interfaz) VALUES (157,'02GB',' ide ');
+INSERT INTO "memoria_ram" (id_producto,capacidad,interfaz) VALUES (158,'88GB','usb');
+INSERT INTO "memoria_ram" (id_producto,capacidad,interfaz) VALUES (159,'72GB','sata ');
+INSERT INTO "memoria_ram" (id_producto,capacidad,interfaz) VALUES (160,'24GB',' ide ');
+
+
+
+---datos disco_duro
+INSERT INTO "disco_duro" (id_producto,memoria,marca,tipo) VALUES (121,'80GB','toshiba ','HDD ');
+INSERT INTO "disco_duro" (id_producto,memoria,marca,tipo) VALUES (122,'20GB',' intel ',' sdd ');
+INSERT INTO "disco_duro" (id_producto,memoria,marca,tipo) VALUES (123,'43GB',' digital',' hibrido');
+INSERT INTO "disco_duro" (id_producto,memoria,marca,tipo) VALUES (124,'64GB','toshiba ','HDD ');
+INSERT INTO "disco_duro" (id_producto,memoria,marca,tipo) VALUES (125,'02GB',' intel ',' sdd ');
+INSERT INTO "disco_duro" (id_producto,memoria,marca,tipo) VALUES (126,'74GB',' digital',' hibrido');
+INSERT INTO "disco_duro" (id_producto,memoria,marca,tipo) VALUES (127,'57GB','toshiba ','HDD ');
+INSERT INTO "disco_duro" (id_producto,memoria,marca,tipo) VALUES (128,'10GB',' intel ',' sdd ');
+INSERT INTO "disco_duro" (id_producto,memoria,marca,tipo) VALUES (129,'76GB',' digital',' hibrido');
+INSERT INTO "disco_duro" (id_producto,memoria,marca,tipo) VALUES (130,'15GB','toshiba ','HDD ');
+INSERT INTO "disco_duro" (id_producto,memoria,marca,tipo) VALUES (131,'96GB',' intel ',' sdd ');
+INSERT INTO "disco_duro" (id_producto,memoria,marca,tipo) VALUES (132,'42GB',' digital',' hibrido');
+INSERT INTO "disco_duro" (id_producto,memoria,marca,tipo) VALUES (133,'79GB','toshiba ','HDD ');
+INSERT INTO "disco_duro" (id_producto,memoria,marca,tipo) VALUES (134,'22GB',' intel ',' sdd ');
+INSERT INTO "disco_duro" (id_producto,memoria,marca,tipo) VALUES (135,'18GB',' digital',' hibrido');
+INSERT INTO "disco_duro" (id_producto,memoria,marca,tipo) VALUES (136,'75GB','toshiba ','HDD ');
+INSERT INTO "disco_duro" (id_producto,memoria,marca,tipo) VALUES (137,'59GB',' intel ',' sdd ');
+INSERT INTO "disco_duro" (id_producto,memoria,marca,tipo) VALUES (138,'72GB',' digital',' hibrido');
+INSERT INTO "disco_duro" (id_producto,memoria,marca,tipo) VALUES (139,'78GB','toshiba ','HDD ');
+INSERT INTO "disco_duro" (id_producto,memoria,marca,tipo) VALUES (140,'21GB',' intel ',' sdd ');
+
+
+
+
+
+
+
+
+
+---datos procesador
+INSERT INTO "procesador" (id_producto,velocidad,nucleos) VALUES (100,'2142M2Z',11);
+INSERT INTO "procesador" (id_producto,velocidad,nucleos) VALUES (101,'7184MBZ',2);
+INSERT INTO "procesador" (id_producto,velocidad,nucleos) VALUES (102,'9187M8Z',6);
+INSERT INTO "procesador" (id_producto,velocidad,nucleos) VALUES (103,'6883M0Z',1);
+INSERT INTO "procesador" (id_producto,velocidad,nucleos) VALUES (104,'8274MAZ',14);
+INSERT INTO "procesador" (id_producto,velocidad,nucleos) VALUES (105,'6938MCZ',16);
+INSERT INTO "procesador" (id_producto,velocidad,nucleos) VALUES (106,'3393MEZ',13);
+INSERT INTO "procesador" (id_producto,velocidad,nucleos) VALUES (107,'9587MAZ',10);
+INSERT INTO "procesador" (id_producto,velocidad,nucleos) VALUES (108,'1250M4Z',8);
+INSERT INTO "procesador" (id_producto,velocidad,nucleos) VALUES (109,'3375MCZ',10);
+INSERT INTO "procesador" (id_producto,velocidad,nucleos) VALUES (110,'2825M8Z',15);
+INSERT INTO "procesador" (id_producto,velocidad,nucleos) VALUES (111,'6451MAZ',3);
+INSERT INTO "procesador" (id_producto,velocidad,nucleos) VALUES (112,'1184MAZ',17);
+INSERT INTO "procesador" (id_producto,velocidad,nucleos) VALUES (113,'7088MAZ',7);
+INSERT INTO "procesador" (id_producto,velocidad,nucleos) VALUES (114,'8535M2Z',14);
+INSERT INTO "procesador" (id_producto,velocidad,nucleos) VALUES (115,'4834M5Z',14);
+INSERT INTO "procesador" (id_producto,velocidad,nucleos) VALUES (116,'5547M8Z',5);
+INSERT INTO "procesador" (id_producto,velocidad,nucleos) VALUES (117,'9307M6Z',14);
+INSERT INTO "procesador" (id_producto,velocidad,nucleos) VALUES (118,'4302MFZ',7);
+INSERT INTO "procesador" (id_producto,velocidad,nucleos) VALUES (119,'0618M7Z',1);
+INSERT INTO "procesador" (id_producto,velocidad,nucleos) VALUES (120,'9153M0Z',5);
+
+
+
+---datos pedidos
 INSERT INTO pedido (id_pedido,monto_final) VALUES (1000,8570);
 INSERT INTO pedido (id_pedido,monto_final) VALUES (1001,7895);
 INSERT INTO pedido (id_pedido,monto_final) VALUES (1002,9515);
@@ -205,7 +435,105 @@ INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (197,'SJM03FIW
 INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (198,'TFH10EFE3AN--womponente','DF-vomputo',1961000);
 INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (199,'TRL86XWT8XY--gomponente','OV-zomputo',1981000);
 
-
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (201,'QJY75RHV4QL--pomponente','US-homputo',21000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (202,'IUU83NXG7KH--zomponente','MF-pomputo',41000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (203,'HBZ98TAV4TN--zomponente','GW-womputo',61000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (204,'MBT47JEK6CN--nomponente','MD-qomputo',81000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (205,'PFI39FNB2KB--qomponente','NF-fomputo',101000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (206,'IJF42ZJW0LT--womponente','AK-homputo',121000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (207,'ABL14LFJ4EF--yomponente','HW-vomputo',141000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (208,'DPD38UJN9OU--momponente','TJ-tomputo',161000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (209,'RVB16JKE1CB--yomponente','IE-tomputo',181000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (210,'JEJ65GZI8CR--nomponente','BA-domputo',201000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (211,'JEL70RRQ0FW--tomponente','TI-xomputo',221000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (212,'RFM02YLM2HZ--yomponente','BO-domputo',241000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (213,'FQC16HIF5BA--somponente','ZQ-qomputo',261000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (214,'TUT54KPD2IL--gomponente','QP-xomputo',281000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (215,'VYP26ZJY2WI--gomponente','SG-somputo',301000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (216,'HED55MIF4QI--qomponente','PE-pomputo',321000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (217,'LNW84TMR5TM--yomponente','QW-jomputo',341000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (218,'KWI44QWD4KP--womponente','HD-vomputo',361000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (219,'SBP65IUJ5TZ--xomponente','VU-womputo',381000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (220,'JDK97WDV1VA--womponente','DB-pomputo',401000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (221,'WJN83GIL9VB--nomponente','TC-bomputo',421000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (222,'YAC39MJB8NI--momponente','AW-xomputo',441000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (223,'RAU19JQD6HW--yomponente','LD-womputo',461000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (224,'EZE34BMU4KE--xomponente','YV-bomputo',481000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (225,'SKF45DEF8PV--jomponente','GC-fomputo',501000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (226,'ENR88CPN8CN--fomponente','MZ-jomputo',521000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (227,'WHD06SCW0WQ--yomponente','NS-nomputo',541000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (228,'OOK23JXD9BQ--komponente','KF-lomputo',561000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (229,'WGO19WQW0JE--komponente','PN-nomputo',581000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (230,'QAQ52EBD5ZJ--vomponente','GZ-zomputo',601000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (231,'PET98DLH7XG--nomponente','SI-lomputo',621000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (232,'LVR33MBH7QI--lomponente','FG-nomputo',641000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (233,'FZO58BLQ8DR--zomponente','LS-lomputo',661000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (234,'FLO60IEZ8AE--homponente','RO-jomputo',681000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (235,'JAT95QYV5XU--lomponente','WI-bomputo',701000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (236,'LWL37STV1HJ--momponente','AU-xomputo',721000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (237,'IEW58HVS1NK--homponente','FG-tomputo',741000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (238,'APQ52KNQ5AQ--womponente','CH-tomputo',761000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (239,'WQJ14CMX5UR--pomponente','SG-tomputo',781000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (240,'KRI43UFF0UC--componente','ZG-zomputo',801000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (241,'QWU33SBI5WT--vomponente','TV-zomputo',821000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (242,'RSX04LNZ9EV--tomponente','MQ-nomputo',841000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (243,'PVS12KXC5XB--tomponente','NE-pomputo',861000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (244,'OOG54YBR4WF--vomponente','CQ-zomputo',881000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (245,'WDN05DXE1JG--qomponente','BE-qomputo',901000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (246,'DJX80DVA4UK--pomponente','AR-xomputo',921000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (247,'DMF33NAX8AN--vomponente','NY-nomputo',941000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (248,'MAX49FOZ9WX--lomponente','QE-somputo',961000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (249,'RIP08LRR9ZN--romponente','AL-komputo',981000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (250,'EOW21BPW4BB--somponente','IG-romputo',1001000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (251,'NDT01XDQ5HU--romponente','YJ-yomputo',1021000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (252,'SUH03DBL1XI--zomponente','DM-somputo',1041000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (253,'TLH15ZHG2JT--zomponente','FY-gomputo',1061000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (254,'JCG94CUV7BR--xomponente','OQ-fomputo',1081000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (255,'MWV35UQK5LW--zomponente','PJ-jomputo',1101000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (256,'BCE61GZH3RG--nomponente','WL-bomputo',1121000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (257,'XMY18JLX4RG--componente','JP-gomputo',1141000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (258,'NHB71FHA8BC--componente','DN-nomputo',1161000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (259,'EOF33FXD6KY--vomponente','RN-jomputo',1181000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (260,'JQE93BGF5CW--nomponente','OQ-domputo',1201000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (261,'MQN79LCZ0QU--romponente','XR-momputo',1221000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (262,'FGZ17TDZ4DI--womponente','OO-womputo',1241000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (263,'JQG55WAS8CY--pomponente','FN-nomputo',1261000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (264,'GXV68HNU2EP--nomponente','ET-vomputo',1281000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (265,'FTI48IIF9SJ--bomponente','ID-somputo',1301000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (266,'RZK18OIE4OJ--jomponente','MU-somputo',1321000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (267,'XQP85ARN4HX--womponente','XB-qomputo',1341000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (268,'AIP47SFY5LQ--tomponente','WH-qomputo',1361000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (269,'HIJ43YMJ8OL--womponente','PO-komputo',1381000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (270,'FMQ54UJR7CZ--womponente','IU-lomputo',1401000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (271,'COA61BHR8AM--yomponente','PO-fomputo',1421000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (272,'HQX60FUY4MZ--yomponente','PB-pomputo',1441000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (273,'GTF08FOS3HX--yomponente','SQ-fomputo',1461000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (274,'MJM85GKD8IY--lomponente','QZ-tomputo',1481000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (275,'FFT20VTQ0MG--zomponente','US-romputo',1501000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (276,'NWJ93FTF9XS--yomponente','SL-qomputo',1521000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (277,'YDC61FVT9GA--bomponente','XN-womputo',1541000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (278,'HVC90ZGA6FX--componente','OK-zomputo',1561000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (279,'XNS37RGL4UO--gomponente','BG-bomputo',1581000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (280,'XAC72BFM7YP--vomponente','WA-komputo',1601000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (281,'RHQ01MKM0GC--zomponente','EZ-zomputo',1621000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (282,'EDM04YFU8NI--nomponente','ZE-domputo',1641000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (283,'JUH27MVJ1SP--xomponente','YS-yomputo',1661000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (284,'PNZ71VOA5XH--jomponente','GU-zomputo',1681000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (285,'LFP06BZY8XW--komponente','EA-jomputo',1701000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (286,'RPT91CCI7FZ--jomponente','YZ-vomputo',1721000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (287,'ZBF22HUE6DN--momponente','TA-momputo',1741000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (288,'JSY49DQZ3IQ--tomponente','IG-somputo',1761000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (289,'QPM25ANO4RV--somponente','XV-nomputo',1781000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (290,'KYS40VFC6RI--zomponente','RW-zomputo',1801000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (291,'XAD84CEU6QS--pomponente','CQ-bomputo',1821000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (292,'XDA10KON4YA--romponente','XB-pomputo',1841000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (293,'XNA42BHS3WV--fomponente','SZ-computo',1861000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (294,'XUU29GXM0IA--domponente','MX-pomputo',1881000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (295,'GEE89LYJ4BG--bomponente','ZR-gomputo',1901000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (296,'YPR60ZOH1VQ--womponente','KV-yomputo',1921000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (297,'SJM03FIW1KL--xomponente','AV-xomputo',1941000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (298,'TFH10EFE3AN--womponente','DF-vomputo',1961000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (299,'TRL86XWT8XY--gomponente','OV-zomputo',1981000);
 
 
 
