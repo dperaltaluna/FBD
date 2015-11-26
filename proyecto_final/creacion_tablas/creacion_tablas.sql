@@ -24,7 +24,7 @@ PRIMARY KEY(id_cliente)
 
 CREATE TABLE pedido
 (
-id_pedido BIGINT UNIQUE,
+id_pedido BIGINT,
 monto_final REAL,
 PRIMARY KEY (id_pedido)
 );
@@ -110,8 +110,8 @@ PRIMARY KEY (id_producto)
 
 CREATE TABLE pedido_producto
 (
-id_producto BIGINT UNIQUE REFERENCES producto(id_producto) MATCH SIMPLE,
-id_pedido BIGINT UNIQUE REFERENCES pedido(id_pedido) MATCH SIMPLE,
+id_producto BIGINT REFERENCES producto(id_producto) MATCH SIMPLE,
+id_pedido BIGINT REFERENCES pedido(id_pedido) MATCH SIMPLE,
 stock INTEGER,
 PRIMARY KEY (id_producto, id_pedido)
 );
@@ -119,10 +119,10 @@ PRIMARY KEY (id_producto, id_pedido)
 
 CREATE TABLE orden 
 (
-id_cliente BIGINT UNIQUE REFERENCES cliente(id_cliente) MATCH SIMPLE,
-id_producto BIGINT UNIQUE REFERENCES producto(id_producto) MATCH SIMPLE,
-id_pedido BIGINT UNIQUE REFERENCES pedido(id_pedido) MATCH SIMPLE,
-PRIMARY KEY (id_producto, id_pedido, id_cliente)
+id_cliente BIGINT  REFERENCES cliente(id_cliente) MATCH SIMPLE,
+id_producto BIGINT REFERENCES producto(id_producto) MATCH SIMPLE,
+id_pedido BIGINT  REFERENCES pedido(id_pedido) MATCH SIMPLE,
+PRIMARY KEY (id_pedido, id_cliente)
 );
 
 CREATE TABLE proveedor
