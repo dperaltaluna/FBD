@@ -1,12 +1,19 @@
 ﻿-- 	DROP TABLE cliente_pedido;
 -- 	DROP TABLE orden;
 -- 	DROP TABLE cliente;
--- 
+drop schema public cascade;
+create schema public;
 CREATE TABLE cliente
 (
 id_cliente SERIAL UNIQUE,
+nombre VARCHAR NOT NULL,
+apellido_paterno VARCHAR NOT NULL,
+apellido_materno VARCHAR NOT NULL,
+usuario VARCHAR NOT NULL,
+pasword VARCHAR NOT NULL,
 telefono VARCHAR NOT NULL,
 email VARCHAR NOT NULL,
+numero_tarjetaC INTEGER,
 numero INTEGER,
 calle VARCHAR NOT NULL,
 colonia VARCHAR  NOT NULL,
@@ -35,18 +42,11 @@ CREATE TABLE producto
 (
 id_producto SERIAL UNIQUE ,
 nombre VARCHAR(20),
+categoria VARCHAR,
 precio INTEGER NOT NULL,
-stock INTEGER,
 PRIMARY KEY(id_producto)
 );
 
-CREATE TABLE pedido_cliente
-(
-id_pedido SERIAL UNIQUE REFERENCES pedido(id_pedido) MATCH SIMPLE,
-cantidad_productos INTEGER NOT NULL,
-id_producto SERIAL UNIQUE REFERENCES producto(id_producto) MATCH SIMPLE,
-PRIMARY KEY (id_pedido, id_producto)
-);
 
 
 CREATE TABLE memoria_ram
@@ -106,27 +106,20 @@ nucleos INTEGER,
 PRIMARY KEY (id_producto)
 );
 
-CREATE TABLE proveedor
-(
-id_proveedor SERIAL UNIQUE,
-nombre VARCHAR,
-telefono INTEGER,
-direccion VARCHAR,
-PRIMARY KEY (id_proveedor)
-);
 
-CREATE TABLE producto_proveedor
+CREATE TABLE pedido_producto
 (
 id_producto SERIAL UNIQUE REFERENCES producto(id_producto) MATCH SIMPLE,
-id_proveedor SERIAL UNIQUE REFERENCES proveedor(id_proveedor) MATCH SIMPLE,
-PRIMARY KEY (id_producto, id_proveedor)
+id_pedido SERIAL UNIQUE REFERENCES pedido(id_pedido) MATCH SIMPLE,
+stock INTEGER,
+PRIMARY KEY (id_producto, id_pedido)
 );
 
-CREATE TABLE orden
+
+CREATE TABLE orden 
 (
-id_pedido SERIAL UNIQUE REFERENCES pedido(id_pedido) MATCH SIMPLE,
 id_cliente SERIAL UNIQUE REFERENCES cliente(id_cliente) MATCH SIMPLE,
 id_producto SERIAL UNIQUE REFERENCES producto(id_producto) MATCH SIMPLE,
-precio INTEGER ,
-PRIMARY KEY (id_cliente, id_pedido, id_producto)
+id_pedido SERIAL UNIQUE REFERENCES pedido(id_pedido) MATCH SIMPLE,
+PRIMARY KEY (id_producto, id_pedido, id_cliente)
 );
