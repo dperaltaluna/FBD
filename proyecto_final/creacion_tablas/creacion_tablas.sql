@@ -123,3 +123,19 @@ id_producto SERIAL UNIQUE REFERENCES producto(id_producto) MATCH SIMPLE,
 id_pedido SERIAL UNIQUE REFERENCES pedido(id_pedido) MATCH SIMPLE,
 PRIMARY KEY (id_producto, id_pedido, id_cliente)
 );
+
+CREATE TABLE proveedor
+(
+id_proveedor SERIAL UNIQUE,
+nombre VARCHAR,
+direccion VARCHAR,
+email VARCHAR,
+PRIMARY KEY (id_proveedor)
+);
+
+CREATE TABLE provee
+(
+id_proveedor SERIAL UNIQUE REFERENCES proveedor(id_proveedor) MATCH SIMPLE,
+id_producto SERIAL UNIQUE REFERENCES producto(id_producto) MATCH SIMPLE,
+PRIMARY KEY (id_producto, id_proveedor)
+);
