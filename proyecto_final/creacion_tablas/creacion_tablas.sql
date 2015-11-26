@@ -1,7 +1,7 @@
-﻿	DROP TABLE cliente_pedido;
-	DROP TABLE orden;
-	DROP TABLE cliente;
-
+﻿-- 	DROP TABLE cliente_pedido;
+-- 	DROP TABLE orden;
+-- 	DROP TABLE cliente;
+-- 
 CREATE TABLE cliente
 (
 id_cliente SERIAL UNIQUE,
@@ -12,10 +12,8 @@ calle VARCHAR NOT NULL,
 colonia VARCHAR  NOT NULL,
 ciudad VARCHAR NOT NULL,
 pais VARCHAR NOT NULL,
-PRIMARY KEY(id_cliente)	
+PRIMARY KEY(id_cliente)
 );
-
-
 
 CREATE TABLE cliente_pedido
 (
@@ -23,7 +21,7 @@ id_cliente SERIAL UNIQUE REFERENCES cliente(id_cliente) MATCH SIMPLE
 ON UPDATE CASCADE ON DELETE CASCADE,
 id_pedido INTEGER NOT NULL,
 fecha DATE,
-PRIMARY KEY (id_cliente, fecha)
+PRIMARY KEY (id_cliente, id_pedido)
 );
 
 CREATE TABLE pedido
