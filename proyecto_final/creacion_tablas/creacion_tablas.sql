@@ -139,3 +139,16 @@ id_proveedor SERIAL UNIQUE REFERENCES proveedor(id_proveedor) MATCH SIMPLE,
 id_producto SERIAL UNIQUE REFERENCES producto(id_producto) MATCH SIMPLE,
 PRIMARY KEY (id_producto, id_proveedor)
 );
+
+
+
+CREATE OR REPLACE FUNCTION inserta_cliente_pedido() RETURNS TRIGGER AS $insertar$
+DECLARE BEGIN 
+	INSERT  INTO cliente_pedido VALUES(cliente.id_cliente);
+	END;
+$insertar$ LANGUAGE plpgsql;
+
+CREATE TRIGGER realiza_orden
+AFTER INSERT ON cliente
+FOR EACH ROW 
+EXECUTE PROCEDURE insertar_cliente_pedido();
