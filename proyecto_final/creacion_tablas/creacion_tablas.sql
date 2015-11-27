@@ -1,8 +1,8 @@
 ﻿-- 	DROP TABLE cliente_pedido;
 -- 	DROP TABLE orden;
 -- 	DROP TABLE cliente;-- 
---drop schema public cascade;
---create schema public;
+drop schema public cascade;
+create schema public;
 CREATE TABLE cliente
 (
 id_cliente BIGINT UNIQUE,
