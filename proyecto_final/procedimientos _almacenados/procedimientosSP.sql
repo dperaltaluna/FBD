@@ -39,10 +39,24 @@ estatus_insercion="insercion exitosa";
 ELSE
 estatus_insercion="el cliente ya existe";
 END IF;
-
 RETURN estatus_insercion;
-
 END;
+$$
+LANGUAGE 'plpgsql';
 
+
+--calculamos elmontofinal del pedido
+CREATE OR REPLACE FUNCTION SP_calcula_monto_final(id_pedidoX BIGINT)
+--funcion para calcular el monto finalde un pedido
+RETURNS real
+AS
+$$
+DECLARE monto_nuevo real;
+BEGIN 
+monto_nuevo= (select monto from (select id_pedido,SUM(precio) as monto FROM producto NATURAL JOIN orden 
+		where id_pedido=id_pedidoX
+		GROUP BY id_pedido ) AS C1);
+RETURN monto_nuevo;
+END;
 $$
 LANGUAGE 'plpgsql';
