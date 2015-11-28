@@ -847,7 +847,7 @@ INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (2464,'tarjeta
 INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (2474,'tarjeta_red','NY-nomputo',941000);
 INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (2484,'tarjeta_red','QE-somputo',961000);
 
-INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (249,'RIP08LRR9ZN--romponente','AL-komputo',981000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (249,'tarjeta-sonido','AL-komputo',981000);
 INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (250,'tarjeta-sonido','IG-romputo',1001000);
 INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (251,'tarjeta-sonido','YJ-yomputo',1021000);
 INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (252,'tarjeta-sonido','DM-somputo',1041000);
