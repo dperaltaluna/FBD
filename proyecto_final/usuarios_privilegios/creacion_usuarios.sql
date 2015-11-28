@@ -52,8 +52,8 @@ WITH GRANT OPTION;
 -- cliente, proveedor y cliente_pedido al usuario
 -- ehc.
 GRANT SELECT 
-ON "cliente", "cliente_pedido", "disco_duro", "memoria_ram", "monitor",
-"orden", "pedido", "pedido_producto", "procesador", "producto", "provee",
+ON "cliente", "cliente_pedido", "disco_duro", "memoria_ram", "monitor"
+,"pedido", "pedido_producto", "procesador", "producto", "provee",
 "proveedor", "tarjeta_grafica", "tarjeta_red", "tarjeta_sonido"
 TO ehc
 WITH GRANT OPTION;
