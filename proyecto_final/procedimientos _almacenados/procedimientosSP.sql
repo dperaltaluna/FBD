@@ -45,17 +45,22 @@ $$
 LANGUAGE 'plpgsql';
 
 
---calculamos elmontofinal del pedido
+--calculamos el montofinal del pedido
 CREATE OR REPLACE FUNCTION SP_calcula_monto_final(id_pedidoX BIGINT)
---funcion para calcular el monto finalde un pedido
+--funcion para calcular el monto total de un pedido
 RETURNS real
 AS
 $$
 DECLARE monto_nuevo real;
 BEGIN 
-monto_nuevo= (select monto from (select id_pedido,SUM(precio) as monto FROM producto NATURAL JOIN orden 
-		where id_pedido=id_pedidoX
-		GROUP BY id_pedido ) AS C1);
+monto_nuevo= (select sum(stock*precio) 
+		from  (select pp.id_pedido,pp.stock,p.precio
+			FROM pedido_producto as pp LEFT JOIN producto as p
+			on pp.id_producto=p.id_producto
+			where p.id_producto is not null
+			group by pp.id_pedido,pp.stock,p.precio
+			)
+		
 RETURN monto_nuevo;
 END;
 $$
