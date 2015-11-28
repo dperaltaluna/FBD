@@ -53,8 +53,8 @@ AS
 $$
 DECLARE monto_nuevo real;
 BEGIN 
-monto_nuevo= (select sum(stock*precio) 
-		from  (select pp.id_pedido,pp.stock,p.precio
+monto_nuevo= (select monto
+		from  (select pp.id_pedido,pp.stock,p.precio,sum(stock*precio) as monto
 			FROM pedido_producto as pp LEFT JOIN producto as p
 			on pp.id_producto=p.id_producto
 			where p.id_producto is not null
