@@ -74,17 +74,27 @@ CREATE OR REPLACE FUNCTION SP_calcula_monto_final(id_pedidoX BIGINT)
 RETURNS BIGINT
 AS
 $$
-DECLARE monto_nuevo real;
+DECLARE monto_nuevo BIGINT;
 BEGIN 
-
-		
-RETURN (select monto
+IF ((select monto
 		from  (select pp.id_pedido,sum(precio) as monto
 			FROM pedido_producto as pp LEFT JOIN producto as p
 			on pp.id_producto=p.id_producto
 			where pp.id_pedido=id_pedidoX
 			group by pp.id_pedido
-			)as c1);
+			)as c1) IS NOT NULL)
+			THEN monto_nuevo = (select monto
+				from  (select pp.id_pedido,sum(precio) as monto
+					FROM pedido_producto as pp LEFT JOIN producto as p
+					on pp.id_producto=p.id_producto
+					where pp.id_pedido=id_pedidoX
+					group by pp.id_pedido
+					)as c1);
+			
+			ELSE monto_nuevo = 0;
+					END IF;
+		
+RETURN monto_nuevo;
 END;
 $$
 LANGUAGE 'plpgsql';
