@@ -2222,6 +2222,16 @@ INSERT INTO cliente_pedido (id_cliente,id_pedido,fecha) VALUES (100296,1086,curr
 INSERT INTO cliente_pedido (id_cliente,id_pedido,fecha) VALUES (100297,1087,current_date);
 INSERT INTO cliente_pedido (id_cliente,id_pedido,fecha) VALUES (100298,1088,current_date);
 INSERT INTO cliente_pedido (id_cliente,id_pedido,fecha) VALUES (100299,1089,current_date);
+INSERT INTO cliente_pedido (id_cliente,id_pedido,fecha) VALUES (10021,1090,current_date);
+INSERT INTO cliente_pedido (id_cliente,id_pedido,fecha) VALUES (10022,1091,current_date);
+INSERT INTO cliente_pedido (id_cliente,id_pedido,fecha) VALUES (10023,1092,current_date);
+INSERT INTO cliente_pedido (id_cliente,id_pedido,fecha) VALUES (10024,1093,current_date);
+INSERT INTO cliente_pedido (id_cliente,id_pedido,fecha) VALUES (10025,1094,current_date);
+INSERT INTO cliente_pedido (id_cliente,id_pedido,fecha) VALUES (10026,1095,current_date);
+INSERT INTO cliente_pedido (id_cliente,id_pedido,fecha) VALUES (10027,1096,current_date);
+INSERT INTO cliente_pedido (id_cliente,id_pedido,fecha) VALUES (10028,1097,current_date);
+INSERT INTO cliente_pedido (id_cliente,id_pedido,fecha) VALUES (10029,1098,current_date);
+INSERT INTO cliente_pedido (id_cliente,id_pedido,fecha) VALUES (1002100,1099,current_date);
 
 --datos pedido_producto
 INSERT INTO "pedido_producto" (id_producto,id_pedido,stock) VALUES (108,1004,5);
@@ -2528,4 +2538,3 @@ INSERT INTO "provee" (id_proveedor,id_producto) VALUES (1960,196);
 INSERT INTO "provee" (id_proveedor,id_producto) VALUES (1970,197);
 INSERT INTO "provee" (id_proveedor,id_producto) VALUES (1980,198);
 INSERT INTO "provee" (id_proveedor,id_producto) VALUES (1990,199);
-
