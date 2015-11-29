@@ -460,6 +460,17 @@ INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (1725,'monitor
 INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (1735,'monitor','SQ-computo',1461000);
 INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (1745,'monitor','QZ-computo',1481000);
 INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (1755,'monitor','US-computo',1501000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (1757,'monitor','MX-computo',1001000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (1759,'monitor','FR-computo',1101010);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (1760,'monitor','ND-computo',1001000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (1768,'monitor','US-computo',1320000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (1777,'monitor','BR-computo',1240000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (1778,'monitor','MX-computo',1180000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (1779,'monitor','BG-computo',1040000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (1780,'monitor','CA-computo',1002000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (1787,'monitor','IT-computo',1302000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (1788,'monitor','NH-computo',1110000);
+INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (1789,'monitor','CA-computo',1503000);
 
 INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (176,'tarjeta_grafica','SL-computo',1521000);
 INSERT INTO producto (id_producto,nombre,categoria,precio) VALUES (177,'tarjeta_grafica','XN-computo',1541000);
@@ -1532,6 +1543,17 @@ INSERT INTO "monitor" (id_producto,tamano,tipo) VALUES (1725,'56 inch','amoled')
 INSERT INTO "monitor" (id_producto,tamano,tipo) VALUES (1735,'25 inch','plasma');
 INSERT INTO "monitor" (id_producto,tamano,tipo) VALUES (1745,'62 inch','lcd');
 INSERT INTO "monitor" (id_producto,tamano,tipo) VALUES (1755,'95 inch','amoled');
+INSERT INTO "monitor" (id_producto,tamano,tipo) VALUES (1757,'70 inch','lcd');
+INSERT INTO "monitor" (id_producto,tamano,tipo) VALUES (1759,'83 inch','lcd');
+INSERT INTO "monitor" (id_producto,tamano,tipo) VALUES (1760,'77 inch','amoled');
+INSERT INTO "monitor" (id_producto,tamano,tipo) VALUES (1768,'81 inch','plasma');
+INSERT INTO "monitor" (id_producto,tamano,tipo) VALUES (1777,'90 inch','amoled');
+INSERT INTO "monitor" (id_producto,tamano,tipo) VALUES (1778,'43 inch','lcd');
+INSERT INTO "monitor" (id_producto,tamano,tipo) VALUES (1779,'57 inch','plasma');
+INSERT INTO "monitor" (id_producto,tamano,tipo) VALUES (1780,'85 inch','amoled');
+INSERT INTO "monitor" (id_producto,tamano,tipo) VALUES (1787,'33 inch','lcd');
+INSERT INTO "monitor" (id_producto,tamano,tipo) VALUES (1788,'68 inch','plasma');
+INSERT INTO "monitor" (id_producto,tamano,tipo) VALUES (1789,'92 inch','amoled');
 
 ---datos memoria
 INSERT INTO "memoria_ram" (id_producto,capacidad,interfaz) VALUES (141,'07GB','sata');
