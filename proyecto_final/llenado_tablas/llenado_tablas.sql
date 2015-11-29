@@ -2049,46 +2049,125 @@ UPDATE pedido SET monto_final = SP_calcula_monto_final(1058) where id_pedido = 1
 INSERT INTO pedido (id_pedido,monto_final) VALUES (1059,0);
 UPDATE pedido SET monto_final = SP_calcula_monto_final(1059) where id_pedido = 1059;
 
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1060,SP_calcula_monto_final(100270));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1061,SP_calcula_monto_final(100271));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1062,SP_calcula_monto_final(100272));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1063,SP_calcula_monto_final(100273));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1064,SP_calcula_monto_final(100274));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1065,SP_calcula_monto_final(100275));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1066,SP_calcula_monto_final(100276));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1067,SP_calcula_monto_final(100277));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1068,SP_calcula_monto_final(100278));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1069,SP_calcula_monto_final(100279));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1070,SP_calcula_monto_final(100280));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1071,SP_calcula_monto_final(100281));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1072,SP_calcula_monto_final(100282));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1073,SP_calcula_monto_final(100283));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1074,SP_calcula_monto_final(100284));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1075,SP_calcula_monto_final(100285));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1076,SP_calcula_monto_final(100286));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1077,SP_calcula_monto_final(100287));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1078,SP_calcula_monto_final(100288));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1079,SP_calcula_monto_final(100289));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1080,SP_calcula_monto_final(100290));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1081,SP_calcula_monto_final(100291));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1082,SP_calcula_monto_final(100292));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1083,SP_calcula_monto_final(100293));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1084,SP_calcula_monto_final(100294));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1085,SP_calcula_monto_final(100295));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1086,SP_calcula_monto_final(100296));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1087,SP_calcula_monto_final(100297));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1088,SP_calcula_monto_final(100298));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1089,SP_calcula_monto_final(100299));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1090,SP_calcula_monto_final(100300));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1091,SP_calcula_monto_final(100301));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1092,SP_calcula_monto_final(100302));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1093,SP_calcula_monto_final(100303));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1094,SP_calcula_monto_final(100304));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1095,SP_calcula_monto_final(100305));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1096,SP_calcula_monto_final(1096));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1097,SP_calcula_monto_final(1097));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1098,SP_calcula_monto_final(1098));
-INSERT INTO pedido (id_pedido,monto_final) VALUES (1099,SP_calcula_monto_final(1099));
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1060,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1060) where id_pedido = 1060;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1061,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1061) where id_pedido = 1061;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1062,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1062) where id_pedido = 1062;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1063,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1063) where id_pedido = 1063;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1064,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1064) where id_pedido = 1064;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1065,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1065) where id_pedido = 1065;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1066,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1066) where id_pedido = 1066;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1067,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1067) where id_pedido = 1067;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1068,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1068) where id_pedido = 1068;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1069,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1069) where id_pedido = 1069;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1070,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1070) where id_pedido = 1070;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1071,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1071) where id_pedido = 1071;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1072,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1072) where id_pedido = 1000;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1073,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1073) where id_pedido = 1073;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1074,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1074) where id_pedido = 1074;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1075,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1075) where id_pedido = 1075;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1076,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1076) where id_pedido = 1076;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1077,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1077) where id_pedido = 1077;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1078,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1078) where id_pedido = 1078;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1079,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1079) where id_pedido = 1079;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1080,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1080) where id_pedido = 1080;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1081,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1081) where id_pedido = 1081;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1082,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1082) where id_pedido = 1082;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1083,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1083) where id_pedido = 1083;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1084,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1084) where id_pedido = 1084;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1085,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1085) where id_pedido = 1085;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1086,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1086) where id_pedido = 1086;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1087,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1087) where id_pedido = 1087;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1088,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1088) where id_pedido = 1088;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1089,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1089) where id_pedido = 1089;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1090,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1090) where id_pedido = 1090;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1091,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1091) where id_pedido = 1091;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1092,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1092) where id_pedido = 1092;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1093,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1093) where id_pedido = 1093;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1094,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1094) where id_pedido = 1094;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1095,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1095) where id_pedido = 1095;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1096,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1096) where id_pedido = 1096;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1097,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1097) where id_pedido = 1097;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1098,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1098) where id_pedido = 1098;
+
+INSERT INTO pedido (id_pedido,monto_final) VALUES (1099,0);
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1099) where id_pedido = 1099;
 
 ---cliente
 INSERT INTO cliente (id_cliente,nombre,apellido_paterno,apellido_materno,usuario,pasword,telefono,email,numero_tarjetac,numero,calle,colonia,ciudad,pais) VALUES (10021,'Vanna','Little','Horton','Maggy','2125','02 92 33 86 85','sed@semconsequat.net','372527017755895','93','Zaria','KD','Zaria','Qatar');
