@@ -4,29 +4,29 @@
 -------------------------------------------------
 -- Se crea el usuario migmor.
 
--- CREATE USER migmor
--- PASSWORD 'migmor'
--- VALID UNTIL '2099-07-04';
+CREATE USER migmor
+PASSWORD 'migmor'
+VALID UNTIL '2099-07-04';
 
 -- Se crea el usuario atd.
 
--- CREATE USER atd
--- PASSWORD 'atd';
+CREATE USER atd
+PASSWORD 'atd';
 
 -- Se crea el usuario dor.
 
--- CREATE USER dor
--- PASSWORD 'dor';
+CREATE USER dor
+PASSWORD 'dor';
 
 
 
 -- -- Se asignan los permisos SELECT y DELETE, 
 -- -- al usuario MIGMOR.
 
--- GRANT SELECT, DELETE
--- ON "Mensajero", "Proveedor"
--- TO migmor
--- WITH GRANT OPTION;
+GRANT SELECT, DELETE
+ON "Mensajero", "proveedor"
+TO migmor
+WITH GRANT OPTION;
 
 
 -- Se asignan los permisos INSERT y SELECT,
