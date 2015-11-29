@@ -2072,7 +2072,7 @@ UPDATE pedido SET monto_final = SP_calcula_monto_final(1070) where id_pedido = 1
 INSERT INTO pedido (id_pedido,monto_final) VALUES (1071,0);
 UPDATE pedido SET monto_final = SP_calcula_monto_final(1071) where id_pedido = 1071;
 INSERT INTO pedido (id_pedido,monto_final) VALUES (1072,0);
-UPDATE pedido SET monto_final = SP_calcula_monto_final(1072) where id_pedido = 1000;
+UPDATE pedido SET monto_final = SP_calcula_monto_final(1072) where id_pedido = 1072;
 INSERT INTO pedido (id_pedido,monto_final) VALUES (1073,0);
 UPDATE pedido SET monto_final = SP_calcula_monto_final(1073) where id_pedido = 1073;
 INSERT INTO pedido (id_pedido,monto_final) VALUES (1074,0);
