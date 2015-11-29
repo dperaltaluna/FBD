@@ -26,8 +26,7 @@ CREATE TABLE cliente
   colonia VARCHAR,
   ciudad VARCHAR,
   pais VARCHAR,
-  PRIMARY KEY(id_cliente),
-  CHECK (id_cliente > 100)
+  PRIMARY KEY(id_cliente)
 );
 
 --- creacion de la tabla pedido para poder identificar 
