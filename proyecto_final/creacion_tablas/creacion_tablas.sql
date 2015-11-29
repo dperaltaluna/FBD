@@ -1,13 +1,12 @@
---================================================
+﻿--================================================
 --CREACIÓN DE LA BASE DE DATOS
 --================================================
 
-CREATE DATABASE Componentes_Computacion;
+-- CREATE DATABASE Componentes_Computacion;
 
 --================================================
 --CRACIÓN DE TABLAS DE LA BASE DE DATOS
 --================================================
-
 --- creacion de la tabla cliente 
 --- para guardar la informacion de los clientess
 --- de la tienda
