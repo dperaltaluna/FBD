@@ -1,20 +1,11 @@
-<<<<<<< HEAD
 ï»¿--================================================
 --CREACIÃ“N DE LA BASE DE DATOS
 --================================================
 
 -- CREATE DATABASE Componentes_Computacion;
 CREATE SCHEMA public
-=======
 --================================================
---CREACIÓN DE LA BASE DE DATOS
---================================================
-
-CREATE DATABASE componentes_computacion;
-
->>>>>>> 4eb40f00bf59beb68eebddad311bafe74bdb9158
---================================================
---CRACIÓN DE TABLAS DE LA BASE DE DATOS
+--CRACIÃ“N DE TABLAS DE LA BASE DE DATOS
 --================================================
 --- creacion de la tabla cliente 
 --- para guardar la informacion de los clientess
@@ -35,7 +26,8 @@ CREATE TABLE cliente
   colonia VARCHAR,
   ciudad VARCHAR,
   pais VARCHAR,
-  PRIMARY KEY(id_cliente)
+  PRIMARY KEY(id_cliente),
+  CHECK (id_cliente > 100)
 );
 
 --- creacion de la tabla pedido para poder identificar 
@@ -204,3 +196,4 @@ ADD CHECK (stock >= 0);
 
 ALTER TABLE procesador
 ADD CHECK (nucleos > 0);
+
