@@ -3,7 +3,7 @@
 --================================================
 
 -- CREATE DATABASE Componentes_Computacion;
-CREATE SCHEMA public
+CREATE SCHEMA public;
 --================================================
 --CRACIÓN DE TABLAS DE LA BASE DE DATOS
 --================================================
