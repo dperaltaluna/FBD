@@ -1,11 +1,11 @@
 --================================================
---CREACIÃ“N DE LA BASE DE DATOS
+--CREACIÓN DE LA BASE DE DATOS
 --================================================
 
-CREATE DATABASE Componentes_Computacion;
+CREATE DATABASE componentes_computacion;
 
 --================================================
---CRACIÃ“N DE TABLAS DE LA BASE DE DATOS
+--CRACIÓN DE TABLAS DE LA BASE DE DATOS
 --================================================
 
 --- creacion de la tabla cliente 
@@ -27,8 +27,7 @@ CREATE TABLE cliente
   colonia VARCHAR,
   ciudad VARCHAR,
   pais VARCHAR,
-  PRIMARY KEY(id_cliente),
-  CHECK (id_cliente > 100)
+  PRIMARY KEY(id_cliente)
 );
 
 --- creacion de la tabla pedido para poder identificar 
@@ -197,4 +196,3 @@ ADD CHECK (stock >= 0);
 
 ALTER TABLE procesador
 ADD CHECK (nucleos > 0);
-
