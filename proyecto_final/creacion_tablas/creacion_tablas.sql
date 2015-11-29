@@ -34,7 +34,7 @@ CREATE TABLE cliente
 CREATE TABLE pedido
 (
   id_pedido BIGINT,
-  monto_final REAL,
+  monto_final BIGINT,
   PRIMARY KEY (id_pedido)
 );
 

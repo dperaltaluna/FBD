@@ -71,7 +71,7 @@ LANGUAGE 'plpgsql';
 
 CREATE OR REPLACE FUNCTION SP_calcula_monto_final(id_pedidoX BIGINT)
 --funcion para calcular el monto total de un pedido
-RETURNS real
+RETURNS BIGINT
 AS
 $$
 DECLARE monto_nuevo real;
