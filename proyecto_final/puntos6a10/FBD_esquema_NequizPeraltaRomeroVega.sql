@@ -3,11 +3,10 @@
 --================================================
 
 CREATE DATABASE componentes_computacion;
-
+--CREATE SCHEMA public;
 --================================================
 --CRACIÓN DE TABLAS DE LA BASE DE DATOS
 --================================================
-
 --- creacion de la tabla cliente 
 --- para guardar la informacion de los clientess
 --- de la tienda
@@ -35,7 +34,7 @@ CREATE TABLE cliente
 CREATE TABLE pedido
 (
   id_pedido BIGINT,
-  monto_final REAL,
+  monto_final BIGINT,
   PRIMARY KEY (id_pedido)
 );
 
@@ -196,3 +195,4 @@ ADD CHECK (stock >= 0);
 
 ALTER TABLE procesador
 ADD CHECK (nucleos > 0);
+
