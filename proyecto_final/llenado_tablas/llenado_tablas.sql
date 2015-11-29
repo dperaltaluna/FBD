@@ -2225,7 +2225,16 @@ INSERT INTO cliente_pedido (id_cliente,id_pedido,fecha) VALUES (100296,1086,curr
 INSERT INTO cliente_pedido (id_cliente,id_pedido,fecha) VALUES (100297,1087,current_date);
 INSERT INTO cliente_pedido (id_cliente,id_pedido,fecha) VALUES (100298,1088,current_date);
 INSERT INTO cliente_pedido (id_cliente,id_pedido,fecha) VALUES (100299,1089,current_date);
-
+INSERT INTO cliente_pedido (id_cliente,id_pedido,fecha) VALUES (10021,1090,current_date);
+INSERT INTO cliente_pedido (id_cliente,id_pedido,fecha) VALUES (10022,1091,current_date);
+INSERT INTO cliente_pedido (id_cliente,id_pedido,fecha) VALUES (10023,1092,current_date);
+INSERT INTO cliente_pedido (id_cliente,id_pedido,fecha) VALUES (10024,1093,current_date);
+INSERT INTO cliente_pedido (id_cliente,id_pedido,fecha) VALUES (10025,1094,current_date);
+INSERT INTO cliente_pedido (id_cliente,id_pedido,fecha) VALUES (10026,1095,current_date);
+INSERT INTO cliente_pedido (id_cliente,id_pedido,fecha) VALUES (10027,1096,current_date);
+INSERT INTO cliente_pedido (id_cliente,id_pedido,fecha) VALUES (10028,1097,current_date);
+INSERT INTO cliente_pedido (id_cliente,id_pedido,fecha) VALUES (10029,1098,current_date);
+INSERT INTO cliente_pedido (id_cliente,id_pedido,fecha) VALUES (1002100,1099,current_date);
 
 --datos pedido_producto
 INSERT INTO "pedido_producto" (id_producto,id_pedido,stock) VALUES (108,1004,5);
@@ -2329,101 +2338,6 @@ INSERT INTO "pedido_producto" (id_producto,id_pedido,stock) VALUES (287,1006,4);
 INSERT INTO "pedido_producto" (id_producto,id_pedido,stock) VALUES (261,1055,7);
 INSERT INTO "pedido_producto" (id_producto,id_pedido,stock) VALUES (263,1015,10);
 -- <<<<<<< HEAD
--- 
--- --datos orden
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100210,134,1021);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100211,204,1017);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100212,136,1006);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100213,138,1027);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100214,274,1087);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100215,196,1048);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100216,271,1051);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100217,125,1016);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100218,293,1065);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100219,205,1046);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100220,222,1031);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100221,114,1078);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100222,278,1065);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100223,243,1011);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100224,251,1095);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100225,203,1069);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100226,224,1003);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100227,159,1007);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100228,146,1032);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100229,229,1057);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100230,241,1041);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100231,190,1010);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100232,126,1097);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100233,249,1044);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100234,216,1070);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100235,236,1013);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100236,148,1057);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100237,295,1044);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100238,145,1002);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100239,180,1001);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100240,161,1017);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100241,131,1036);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100242,269,1064);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100243,207,1012);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100244,232,1009);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100245,293,1086);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100246,173,1058);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100247,269,1012);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100248,234,1004);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100249,198,1028);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100250,158,1013);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100251,278,1059);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100252,224,1036);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100253,275,1017);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100254,115,1088);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100255,250,1091);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100256,148,1098);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100257,278,1073);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100258,104,1047);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100259,244,1070);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100260,106,1062);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100261,287,1090);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100262,192,1096);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100263,155,1067);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100264,206,1077);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100265,201,1059);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100266,173,1028);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100267,199,1028);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100268,193,1069);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100269,109,1069);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100270,146,1053);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100271,242,1097);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100272,210,1056);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100273,237,1072);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100274,151,1023);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100275,110,1080);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100276,243,1042);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100277,232,1076);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100278,224,1022);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100279,271,1001);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100280,241,1034);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100281,114,1098);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100282,151,1069);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100283,247,1086);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100284,219,1051);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100285,215,1071);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100286,255,1009);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100287,279,1083);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100288,243,1025);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100289,182,1030);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100290,179,1053);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100291,274,1067);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100292,186,1035);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100293,272,1067);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100294,238,1005);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100295,280,1046);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100296,279,1024);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100297,224,1011);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100298,247,1092);
--- INSERT INTO "orden" (id_cliente,id_producto,id_pedido) VALUES (100299,162,1058);
-
-
-
 
 ---datos proveedor
 INSERT INTO "proveedor" (id_proveedor,nombre,direccion,email) VALUES (1000,'Interdum Limited','7927 Laoreet Ave','augue.eu@gravidaPraesenteu.edu');
