@@ -57,7 +57,7 @@ monto_nuevo= (select monto
 		from  (select pp.id_pedido,pp.stock,p.precio,sum(stock*precio) as monto
 			FROM pedido_producto as pp LEFT JOIN producto as p
 			on pp.id_producto=p.id_producto
-			where p.id_producto is not null
+			where p.id_producto is not null and pp.id_pedido=id_pedidoX
 			group by pp.id_pedido,pp.stock,p.precio
 			)
 		
