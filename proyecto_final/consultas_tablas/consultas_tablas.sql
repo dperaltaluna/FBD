@@ -34,3 +34,33 @@ WHERE cl.nombre ~ '^V' AND p.monto_final > 0;
 -- sera 'Activo', si su apellido es Perry el cliente sera 'Aprobando' 
 -- y en cualquier otro caso 'En proceso'.
 
+select * from ((
+(
+select 'Autorizado' AS estado, id_cliente,id_pedido,count(id_producto) AS p1 from cliente natural join cliente_pedido 
+natural join pedido_producto WHERE EXTRACT(YEAR FROM(fecha)) = 2015 
+group by id_cliente, id_pedido having count(id_producto) > 0
+) 
+UNION 
+(
+select 'Activo' AS estado, id_cliente,id_pedido,count(id_producto) AS p1 from cliente natural join cliente_pedido 
+natural join pedido_producto WHERE nombre = 'Erin'
+group by id_cliente, id_pedido having count(id_producto) > 0
+) 
+
+UNION 
+(
+select 'Aprobando' AS estado, id_cliente,id_pedido,count(id_producto) AS p1 from cliente natural join cliente_pedido 
+natural join pedido_producto WHERE apellido_paterno = 'Perry'
+group by id_cliente, id_pedido having count(id_producto) > 0
+)
+UNION
+(select 'En proceso' AS estado, id_cliente, id_pedido, count(id_producto) AS p1 from cliente natural join cliente_pedido 
+natural join pedido_producto group by id_cliente, id_pedido having count(id_producto) > 0)
+) 
+)
+
+
+as c2
+
+
+select * from producto
