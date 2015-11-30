@@ -15,8 +15,14 @@ WHERE EXTRACT(YEAR FROM(fecha)) = 2015 AND c.pais = 'Japan';
 
 SELECT cli.id_cliente, cp.id_pedido, cp.fecha, cli.nombre, cli.apellido_paterno, cli.apellido_materno
 FROM (cliente_pedido cp INNER JOIN cliente cli ON (cp.id_cliente = cli.id_cliente))
-WHERE EXTRACT(MONTH FROM(fecha)) != 10;
-
+WHERE EXTRACT(MONTH FROM(fecha)) != 10 and cli.id_cliente not in (
+	select c.id_cliente
+	from cliente_pedido as cp
+		left join
+		cliente as c 
+		on cp.id_cliente=c.id_cliente
+	where c.id_cliente is not null and EXTRACT(MONTH FROM(cp.fecha)) = 10 
+	)
 
 -- 3. Aquellos clientes y pedidos que empiecen con V y hayan 
 -- comprado al menos un producto.
