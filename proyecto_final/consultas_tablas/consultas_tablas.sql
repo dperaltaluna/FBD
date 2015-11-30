@@ -40,38 +40,59 @@ WHERE cl.nombre ~ '^V' AND p.monto_final > 0;
 -- sera 'Activo', si su apellido es Perry el cliente sera 'Aprobando' 
 -- y en cualquier otro caso 'En proceso'.
 
-<<<<<<< HEAD
-select * from ((
-(
-select 'Autorizado' AS estado, id_cliente,id_pedido,count(id_producto) AS p1 from cliente natural join cliente_pedido 
-natural join pedido_producto WHERE EXTRACT(YEAR FROM(fecha)) = 2015 
-group by id_cliente, id_pedido having count(id_producto) > 0
-) 
-UNION 
-(
-select 'Activo' AS estado, id_cliente,id_pedido,count(id_producto) AS p1 from cliente natural join cliente_pedido 
-natural join pedido_producto WHERE nombre = 'Erin'
-group by id_cliente, id_pedido having count(id_producto) > 0
-) 
 
-UNION 
+select * from (
 (
-select 'Aprobando' AS estado, id_cliente,id_pedido,count(id_producto) AS p1 from cliente natural join cliente_pedido 
-natural join pedido_producto WHERE apellido_paterno = 'Perry'
-group by id_cliente, id_pedido having count(id_producto) > 0
-)
+	(
+	select id_cliente AS CLIENTE,nombre,apellido_paterno AS APELLIDO,id_pedido AS PEDIDO,
+	count(id_producto)AS NUMERO_PEDIDOS, 'Autorizado' AS estado_orden 
+	from cliente natural join cliente_pedido 
+	natural join pedido_producto WHERE EXTRACT(YEAR FROM(fecha)) = 2015 
+	group by id_cliente, id_pedido,nombre ,apellido_paterno
+	having count(id_producto) > 0
+	) 
+UNION 
+	(
+	select id_cliente AS CLIENTE,nombre,apellido_paterno AS APELLIDO,id_pedido AS PEDIDO,
+	count(id_producto)AS NUMERO_PEDIDOS ,'Activo' AS estado_orden 
+	from cliente natural join cliente_pedido 
+	natural join pedido_producto WHERE nombre = 'Erin'
+	group by id_cliente, id_pedido,nombre,apellido_paterno 
+	having count(id_producto) > 0
+	) 
+UNION 
+	(
+	select  id_cliente AS CLIENTE,nombre,apellido_paterno AS APELLIDO,id_pedido AS PEDIDO,
+	count(id_producto)AS NUMERO_PEDIDOS ,'Aprobando' AS estado_orden 
+	from cliente natural join cliente_pedido 
+	natural join pedido_producto WHERE apellido_paterno = 'Perry'
+	group by id_cliente, id_pedido,nombre,apellido_paterno 
+	having count(id_producto) > 0
+	)
+UNION 
+	(
+	select  c.id_cliente AS CLIENTE,c.nombre,apellido_paterno AS APELLIDO,id_pedido AS PEDIDO,
+	count(t.id_producto) AS NUMERO_PEDIDOS ,'Verificado' AS estado_orden
+	from cliente as c natural join cliente_pedido 
+	natural join pedido_producto as t inner join producto as s on t.id_producto = s.id_producto WHERE precio = 20
+	group by c.id_cliente, id_pedido,c.nombre,apellido_paterno 
+	having count(t.id_producto) > 0
+	)
 UNION
-(select 'En proceso' AS estado, id_cliente, id_pedido, count(id_producto) AS p1 from cliente natural join cliente_pedido 
-natural join pedido_producto group by id_cliente, id_pedido having count(id_producto) > 0)
-) 
-)
-
+	(
+	select  id_cliente AS CLIENTE,nombre,apellido_paterno AS APELLIDO, id_pedido AS PEDIDO, 
+	count(id_producto) AS NUMERO_PEDIDOS,'En proceso' AS estado_orden  
+	from cliente natural join cliente_pedido 
+	natural join pedido_producto group by id_cliente, id_pedido,nombre,apellido_paterno 
+	having count(id_producto) > 0)
+	)
+	)
 
 as c2
 
 
--- select * from producto
-=======
+-- select * from pedido_producto
+---version tania
 select *
 from (select s.id_pedido,s.id_producto, precio, s.stock,s.monto_final
 	from (select  pp.id_pedido,pp.id_producto, stock,monto_final
@@ -96,4 +117,3 @@ from (select s.id_pedido,s.id_producto, precio, s.stock,s.monto_final
 where cc.id_pedido is not null
 	and extract(year from cc.fecha)=2015 and precio>50 
 
->>>>>>> 75dbef3b77aee869375b7bbd78849bc3bc961e9f
