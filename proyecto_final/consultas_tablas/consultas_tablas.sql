@@ -70,7 +70,7 @@ natural join pedido_producto group by id_cliente, id_pedido having count(id_prod
 as c2
 
 
-select * from producto
+-- select * from producto
 =======
 select *
 from (select s.id_pedido,s.id_producto, precio, s.stock,s.monto_final
