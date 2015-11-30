@@ -34,3 +34,27 @@ WHERE cl.nombre ~ '^V' AND p.monto_final > 0;
 -- sera 'Activo', si su apellido es Perry el cliente sera 'Aprobando' 
 -- y en cualquier otro caso 'En proceso'.
 
+select *
+from (select s.id_pedido,s.id_producto, precio, s.stock,s.monto_final
+	from (select  pp.id_pedido,pp.id_producto, stock,monto_final
+		from pedido_producto as pp left join pedido p 
+		on p.id_pedido=pp.id_pedido
+		where p.id_pedido is not null) as s  
+		left join producto as prdc 
+		on s.id_producto=prdc.id_producto
+	where prdc.id_producto is not null
+	group by s.id_pedido,s.id_producto, precio, s.stock,s.monto_final
+	order by 1 
+	) as r
+	left join 
+	(select c.id_cliente, c.nombre, c.apellido_paterno, c.apellido_materno, cp.id_pedido, cp.fecha
+	from cliente_pedido as cp
+		left join
+		cliente as c
+		on cp.id_cliente=c.id_cliente
+	where c.id_cliente is not null)
+	as cc
+	on r.id_pedido=cc.id_pedido
+where cc.id_pedido is not null
+	and extract(year from cc.fecha)=2015 and precio>50 
+
