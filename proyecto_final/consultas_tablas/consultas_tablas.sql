@@ -74,7 +74,7 @@ UNION
 	select  c.id_cliente AS CLIENTE,c.nombre,apellido_paterno AS APELLIDO,id_pedido AS PEDIDO,
 	count(t.id_producto) AS NUMERO_PEDIDOS ,'Verificado' AS estado_orden
 	from cliente as c natural join cliente_pedido 
-	natural join pedido_producto as t inner join producto as s on t.id_producto = s.id_producto WHERE precio = 20
+	natural join pedido_producto as t inner join producto as s on t.id_producto = s.id_producto WHERE precio != 20
 	group by c.id_cliente, id_pedido,c.nombre,apellido_paterno 
 	having count(t.id_producto) > 0
 	)
