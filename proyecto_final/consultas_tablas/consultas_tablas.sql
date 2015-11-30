@@ -87,8 +87,7 @@ UNION
 	having count(id_producto) > 0)
 	)
 	)
-
-as c2
+as c2;
 
 
 -- select * from pedido_producto
@@ -115,5 +114,5 @@ from (select s.id_pedido,s.id_producto, precio, s.stock,s.monto_final
 	as cc
 	on r.id_pedido=cc.id_pedido
 where cc.id_pedido is not null
-	and extract(year from cc.fecha)=2015 and precio>50 
+	and extract(year from cc.fecha)=2015 and precio>50;
 
